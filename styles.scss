@@ -1,0 +1,54 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//circumference = 2πr
+// svg circle radius is 139
+
+// $pi: 3.14159265358979;
+// $Twopi: $pi * 2;
+
+// $circumference: calc(#{$Twopi} * 139);
+// $arc-length-percent: 0.5;
+
+.circle {
+  fill: none;
+  stroke-width: 10px;
+  stroke: tomato;
+  //0.5 - 50%
+  // stroke-dasharray: calc(#{$arc-length-percent} * #{$circumference})
+  //   $circumference;
+}
+
+.circle-bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: grey;
+}
+
+//layout stuff
+
+.container {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
