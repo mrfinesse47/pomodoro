@@ -50,4 +50,8 @@ svg {
   left: 0;
   right: 0;
 }
+
+#pomodoro-sm {
+  visibility: visible;
+}
 /*# sourceMappingURL=styles.css.map */
