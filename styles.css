@@ -8,11 +8,17 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .pomodoro-container {
-  width: 400px;
-  height: 400px;
+  background-color: #161932;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +36,7 @@ body {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  color: #d7e0ff;
 }
 
 .pomodoro-container svg {
@@ -44,13 +51,13 @@ body {
 
 .pomodoro-container .circle {
   fill: none;
-  stroke-width: 10px;
+  stroke-width: 0.625rem;
   stroke: tomato;
 }
 
 .pomodoro-container .circle-bg {
   fill: none;
-  stroke-width: 10px;
+  stroke-width: 0.625rem;
   stroke: grey;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,8 @@
 // });
 
 const PI = 3.14159265358979;
-let timeGonePercent = 66;
+const RADIUS = 180;
+let timeGonePercent = 50;
 
 const pomodoro = document.getElementById("pomodoro-time");
-pomodoro.style.strokeDasharray = timeGonePercent * 0.01 * 2 * PI * 139;
+pomodoro.style.strokeDasharray = timeGonePercent * 0.01 * 2 * PI * RADIUS;

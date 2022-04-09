@@ -2,11 +2,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .pomodoro-container {
-  width: 400px;
-  height: 400px;
+  background-color: #161932;
+  border-radius: 50%;
+  width: 25rem;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +19,7 @@ body {
   h1 {
     font-family: sans-serif;
     align-self: center;
+    color: #d7e0ff;
   }
   svg {
     position: absolute;
@@ -26,12 +32,12 @@ body {
   }
   .circle {
     fill: none;
-    stroke-width: 10px;
+    stroke-width: 0.625rem; //controls the width of the time bar
     stroke: tomato;
   }
   .circle-bg {
     fill: none;
-    stroke-width: 10px;
+    stroke-width: 0.625rem;
     stroke: grey;
   }
 }
