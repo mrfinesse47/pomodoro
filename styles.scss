@@ -4,59 +4,34 @@ body {
   align-items: center;
 }
 
-//circumference = 2πr
-// svg circle radius is 139
-
-// $pi: 3.14159265358979;
-// $Twopi: $pi * 2;
-
-// $circumference: calc(#{$Twopi} * 139);
-// $arc-length-percent: 0.5;
-
-.circle {
-  fill: none;
-  stroke-width: 10px;
-  stroke: tomato;
-  //0.5 - 50%
-  // stroke-dasharray: calc(#{$arc-length-percent} * #{$circumference})
-  //   $circumference;
-}
-
-.circle-bg {
-  fill: none;
-  stroke-width: 10px;
-  stroke: grey;
-}
-
-//layout stuff
-
-.container {
+.pomodoro-container {
   width: 400px;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-}
-
-h1 {
-  font-family: sans-serif;
-  align-self: center;
-}
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-#pomodoro-sm {
-  visibility: visible;
-}
-
-.container {
+  h1 {
+    font-family: sans-serif;
+    align-self: center;
+  }
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .circle {
+    fill: none;
+    stroke-width: 10px;
+    stroke: tomato;
+  }
+  .circle-bg {
+    fill: none;
+    stroke-width: 10px;
+    stroke: grey;
+  }
 }
