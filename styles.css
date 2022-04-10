@@ -10,15 +10,19 @@ body {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background-color: #161932;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .pomodoro-container {
-  background-color: #161932;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  -webkit-box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+          box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
   border-radius: 50%;
-  width: 25rem;
-  height: 25rem;
+  width: 300px;
+  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +33,22 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+.pomodoro-container .inner-container {
+  background-color: #161932;
+  width: 89.267%;
+  height: 89.267%;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pomodoro-container h1 {
@@ -51,13 +71,13 @@ body {
 
 .pomodoro-container .circle {
   fill: none;
-  stroke-width: 0.625rem;
-  stroke: tomato;
+  stroke-width: 11.5px;
+  stroke: #f87070;
 }
 
 .pomodoro-container .circle-bg {
   fill: none;
-  stroke-width: 0.625rem;
-  stroke: grey;
+  stroke-width: 10px;
+  stroke: #161932;
 }
 /*# sourceMappingURL=styles.css.map */

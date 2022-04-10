@@ -3,19 +3,31 @@ body {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  background-color: #161932;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .pomodoro-container {
-  background-color: #161932;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
   border-radius: 50%;
-  width: 25rem;
-  height: 25rem;
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  .inner-container {
+    background-color: #161932;
+    width: 89.267%;
+    height: 89.267%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   h1 {
     font-family: sans-serif;
     align-self: center;
@@ -32,12 +44,12 @@ body {
   }
   .circle {
     fill: none;
-    stroke-width: 0.625rem; //controls the width of the time bar
-    stroke: tomato;
+    stroke-width: 11.5px; //controls the width of the time bar
+    stroke: #f87070;
   }
   .circle-bg {
     fill: none;
-    stroke-width: 0.625rem;
-    stroke: grey;
+    stroke-width: 10px;
+    stroke: #161932;
   }
 }
