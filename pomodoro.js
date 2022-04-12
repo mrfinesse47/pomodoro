@@ -3,7 +3,7 @@
 // });
 
 const PI = 3.14159265358979;
-const RADIUS = 159;
+const RADIUS = 159.5;
 let timeGonePercent = 85;
 
 const pomodoro = document.getElementById("pomodoro-time");
