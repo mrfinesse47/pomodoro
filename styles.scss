@@ -1,10 +1,17 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
   box-sizing: border-box;
-  background-color: #161932;
+  background-color: #1e213f;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -21,26 +28,44 @@ header {
 }
 
 nav {
-  background-color: #161932;
-  font-size: 0.75rem;
   font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  margin: 0 auto;
-  width: 20.473rem;
-  height: 3.9375rem;
-  color: #d7e0ff;
-  border-radius: 1.96875rem;
-
-  .menu-selected {
-    border-radius: 1.656rem;
-    background-color: #f87070;
-    color: #1e213f;
-    padding: 1.125rem 1.463rem;
-  }
   margin-bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 327px;
+  }
+  ul {
+    // margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 327px;
+    height: 3.9375rem;
+    border-radius: 31.5px;
+    background-color: #161932;
+    li {
+      color: #d7e0ff;
+      text-align: center;
+      opacity: 0.4;
+      font-size: 12px;
+      border-radius: 26.5px;
+      width: 32.41%;
+      height: 76.1%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .selected {
+      opacity: 1;
+      background-color: #f87070;
+
+      color: #1e213f;
+    }
+  }
 }
 
 .pomodoro-container {

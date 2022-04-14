@@ -2,10 +2,17 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  background-color: #161932;
+  background-color: #1e213f;
   margin: 0;
   padding: 0;
   min-height: 100vh;
+}
+
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -23,35 +30,64 @@ header h1 {
 }
 
 nav {
-  background-color: #161932;
-  font-size: 0.75rem;
   font-weight: 700;
+  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .container {
+  width: 327px;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto;
-  width: 20.473rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 327px;
   height: 3.9375rem;
-  color: #d7e0ff;
-  border-radius: 1.96875rem;
-  margin-bottom: 5rem;
+  border-radius: 31.5px;
+  background-color: #161932;
 }
 
-nav .menu-selected {
-  border-radius: 1.656rem;
+nav ul li {
+  color: #d7e0ff;
+  text-align: center;
+  opacity: 0.4;
+  font-size: 12px;
+  border-radius: 26.5px;
+  width: 32.41%;
+  height: 76.1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav ul .selected {
+  opacity: 1;
   background-color: #f87070;
   color: #1e213f;
-  padding: 1.125rem 1.463rem;
 }
 
 .pomodoro-container {
