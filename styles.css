@@ -1,4 +1,5 @@
 body {
+  font-family: "Kumbh Sans", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #161932;
@@ -8,27 +9,49 @@ body {
 }
 
 header {
-  font-family: "Kumbh Sans", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   margin: 0 auto;
   color: #d7e0ff;
+  z-index: 10;
   text-align: center;
-  margin-bottom: 20rem;
+  margin-bottom: 5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
 }
 
 nav {
   background-color: #161932;
+  font-size: 0.75rem;
+  font-weight: 700;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
   width: 20.473rem;
+  height: 3.9375rem;
   color: #d7e0ff;
+  border-radius: 1.96875rem;
+  margin-bottom: 5rem;
+}
+
+nav .menu-selected {
+  border-radius: 1.656rem;
+  background-color: #f87070;
+  color: #1e213f;
+  padding: 1.125rem 1.463rem;
 }
 
 .pomodoro-container {
