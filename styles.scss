@@ -60,6 +60,10 @@ nav {
       justify-content: center;
     }
 
+    li:hover {
+      cursor: pointer;
+    }
+
     .selected {
       opacity: 1;
       background-color: #f87070;
@@ -122,4 +126,8 @@ nav {
   margin-top: 4.9735rem;
   img {
   }
+}
+
+.settings:hover {
+  cursor: pointer;
 }

@@ -85,6 +85,10 @@ nav ul li {
           justify-content: center;
 }
 
+nav ul li:hover {
+  cursor: pointer;
+}
+
 nav ul .selected {
   opacity: 1;
   background-color: #f87070;
@@ -166,5 +170,9 @@ nav ul .selected {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 4.9735rem;
+}
+
+.settings:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
