@@ -8,3 +8,6 @@ let timeGonePercent = 85;
 
 const pomodoro = document.getElementById("pomodoro-time");
 pomodoro.style.strokeDasharray = timeGonePercent * 0.01 * 2 * PI * RADIUS;
+
+const timeRemaining = document.getElementById("time-remaining");
+timeRemaining.innerText = "87";
