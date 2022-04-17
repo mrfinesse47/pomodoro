@@ -77,7 +77,7 @@ nav {
   background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
   box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
   border-radius: 50%;
-  width: 300px;
+  width: 300px; //the image and scales nicely here due to viewbox
   height: 300px;
   margin: 0 auto;
   display: flex;
@@ -124,8 +124,6 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 4.9735rem;
-  img {
-  }
 }
 
 .settings:hover {
