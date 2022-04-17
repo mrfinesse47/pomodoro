@@ -1,28 +1,47 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   // Handler when the DOM is fully loaded
-// });
+//-constants -------------------------------------------------//
 
-let totalTime = 1 * 60; //25 minutes
+const PI = 3.14159265358979;
+const RADIUS = 159.5;
+
+//-------------------------------------------------------------//
+
+//-global vars ------------------------------------------------//
+
+let totalTime = 1 * 60; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
 
-setCountPercent(percentRemaining);
+//-------------------------------------------------------------//
+
+//-initilization ----------------------------------------------//
+
+updatePomodoroDOM();
 
 window.setInterval(() => {
-  timeRemaining -= 1;
-  percentRemaining = (timeRemaining / totalTime) * 100;
-  setCountPercent(percentRemaining);
+  decrementTimeRemaining();
+  updatePomodoroDOM();
 }, 1000);
 
-function setCountPercent(percentage) {
-  const PI = 3.14159265358979;
-  const RADIUS = 159.5;
-  const pomodoroEL = document.getElementById("pomodoro-time");
+//-------------------------------------------------------------//
 
+//-functions --------------------------------------------------//
+
+function decrementTimeRemaining() {
+  timeRemaining -= 1;
+  percentRemaining = (timeRemaining / totalTime) * 100;
+}
+
+//-------------------------------------------------------------//
+
+//-DOM Manipulation functions ---------------------------------//
+
+function updatePomodoroDOM() {
+  const pomodoroEL = document.getElementById("pomodoro-time");
   const timeRemainingEL = document.getElementById("time-remaining");
   pomodoroEL.style.strokeDasharray = `${
-    percentage * 0.01 * 2 * PI * RADIUS //(100-percentage) to count up
+    percentRemaining * 0.01 * 2 * PI * RADIUS //(100-percentage) to count up
   }, 36000`;
-
   timeRemainingEL.innerText = timeRemaining;
 }
+
+//-------------------------------------------------------------//
