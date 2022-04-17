@@ -2,7 +2,7 @@
 //   // Handler when the DOM is fully loaded
 // });
 
-setCountPercent(75);
+setCountPercent(95);
 
 function setCountPercent(percentage) {
   const PI = 3.14159265358979;
