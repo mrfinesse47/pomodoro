@@ -175,4 +175,8 @@ nav ul .selected {
 .settings:hover {
   cursor: pointer;
 }
+
+.modal {
+  background-color: #ffffff;
+}
 /*# sourceMappingURL=styles.css.map */

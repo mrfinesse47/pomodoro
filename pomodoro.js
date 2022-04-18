@@ -1,7 +1,7 @@
 //-constants -------------------------------------------------//
 
 const PI = 3.14159265358979;
-const RADIUS = 159.5;
+const RADIUS = 159.5; // from the SVG circle
 const MINUTE = 60;
 
 //-------------------------------------------------------------//
@@ -11,27 +11,26 @@ const MINUTE = 60;
 let totalTime = 10 * MINUTE; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
+let interval = null;
 
 //-------------------------------------------------------------//
 
 //-initilization ----------------------------------------------//
 
 updatePomodoroDOM();
-
-const interval = window.setInterval(decrementTimeRemaining, 1000);
+interval = window.setInterval(decrementTimeRemaining, 1000);
 
 //-------------------------------------------------------------//
 
 //-functions --------------------------------------------------//
 
 function decrementTimeRemaining() {
-  console.log("tick");
   if (timeRemaining > 0) {
     timeRemaining -= 1;
     percentRemaining = (timeRemaining / totalTime) * 100;
     updatePomodoroDOM();
   } else {
-    //clear interval
+    //clear interval at time zero
     window.clearInterval(interval);
   }
 }
@@ -52,7 +51,7 @@ function updatePomodoroDOM() {
     pomodoroEL.style.stroke = "none";
   } else {
     if (pomodoroEL.style.stroke === "none") {
-      //only change DOM if it is set to none
+      //only add to DOM if it is set to none
       pomodoroEL.style.stroke = "#f87070";
     }
   }
