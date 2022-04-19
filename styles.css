@@ -43,7 +43,7 @@ nav {
 }
 
 nav .container {
-  width: 327px;
+  width: 20.4375rem;
 }
 
 nav ul {
@@ -61,9 +61,9 @@ nav ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 327px;
+  width: 20.4375rem;
   height: 3.9375rem;
-  border-radius: 31.5008px;
+  border-radius: 1.9688rem;
   background-color: #161932;
 }
 
@@ -71,8 +71,8 @@ nav ul li {
   color: #d7e0ff;
   text-align: center;
   opacity: 0.4;
-  font-size: 12px;
-  border-radius: 26.5008px;
+  font-size: 0.75rem;
+  border-radius: 1.6563rem;
   width: 32.41%;
   height: 76.1%;
   display: -webkit-box;
@@ -98,11 +98,11 @@ nav ul .selected {
 
 .pomodoro-container {
   background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-  -webkit-box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
-          box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+  -webkit-box-shadow: -3.125rem -3.125rem 6.25rem #272c5a, 3.125rem 3.125rem 6.25rem #121530;
+          box-shadow: -3.125rem -3.125rem 6.25rem #272c5a, 3.125rem 3.125rem 6.25rem #121530;
   border-radius: 50%;
-  width: 300px;
-  height: 300px;
+  width: 18.75rem;
+  height: 18.75rem;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,13 +153,13 @@ nav ul .selected {
 
 .pomodoro-container .circle {
   fill: none;
-  stroke-width: 11.5008px;
+  stroke-width: 0.7188rem;
   stroke: #f87070;
 }
 
 .pomodoro-container .circle-bg {
   fill: none;
-  stroke-width: 10px;
+  stroke-width: 0.625rem;
   stroke: #161932;
 }
 
@@ -208,7 +208,7 @@ nav ul .selected {
 }
 
 .modal header img {
-  height: 14px;
-  width: 14px;
+  height: 0.875rem;
+  width: 0.875rem;
 }
 /*# sourceMappingURL=styles.css.map */
