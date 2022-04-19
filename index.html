@@ -11,6 +11,15 @@
       href="./assets/favicon-32x32.png"
     />
 
+    <!-- font awesome imports
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    /> -->
+
     <!-- Google fonts imports -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -86,29 +95,59 @@
     <!-- settings modal -->
 
     <aside class="modal">
-      <header><h2>Settings</h2></header>
+      <header>
+        <h2>Settings</h2>
+        <img src="./assets/icon-close.svg" alt="" />
+      </header>
       <section>
         <h3>TIME (MINUTES)</h3>
         <div class="selection">
           <h4>pomodoro</h4>
           <div class="stepper">
             <span>25</span>
-            <div>up</div>
+            <div>
+              <img src="./assets/icon-arrow-up.svg" alt="" />
+              <img src="./assets/icon-arrow-down.svg" alt="" />
+            </div>
           </div>
         </div>
         <div class="selection">
           <h4>short break</h4>
           <div class="stepper">
             <span>25</span>
-            <div>up</div>
+            <div>
+              <img src="./assets/icon-arrow-up.svg" alt="" />
+              <img src="./assets/icon-arrow-down.svg" alt="" />
+            </div>
           </div>
         </div>
         <div class="selection">
           <h4>long break</h4>
           <div class="stepper">
             <span>25</span>
-            <div>up</div>
+            <div>
+              <img src="./assets/icon-arrow-up.svg" alt="" />
+              <img src="./assets/icon-arrow-down.svg" alt="" />
+            </div>
           </div>
+        </div>
+        <div class="circle-selection">
+          <h4>FONT</h4>
+          <div class="circle-font"></div>
+          <!-- kumbah sans -->
+          <div class="circle-font"></div>
+          <!-- roboto slab -->
+          <div class="circle-font"></div>
+          <!-- space mono -->
+        </div>
+        <div class="circle-selection">
+          <h4>COLOR</h4>
+          <div class="circle-color"></div>
+          <!-- tomoto -->
+          <div class="circle-color"></div>
+          <!-- aqua -->
+          <div class="circle-color"></div>
+          <!-- purple -->
         </div>
       </section>
     </aside>
