@@ -132,4 +132,11 @@ nav {
 
 .modal {
   background-color: #ffffff;
+  z-index: 10;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20.4375rem;
 }
