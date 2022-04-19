@@ -9,12 +9,13 @@ body {
 
 p,
 ul,
+h2,
 li {
   margin: 0;
   padding: 0;
 }
 
-header {
+.title {
   font-weight: 700;
   font-size: 1.5rem;
   margin: 0 auto;
@@ -45,14 +46,14 @@ nav {
     justify-content: center;
     width: 327px;
     height: 3.9375rem;
-    border-radius: 31.5px;
+    border-radius: 31.5008px;
     background-color: #161932;
     li {
       color: #d7e0ff;
       text-align: center;
       opacity: 0.4;
       font-size: 12px;
-      border-radius: 26.5px;
+      border-radius: 26.5008px;
       width: 32.41%;
       height: 76.1%;
       display: flex;
@@ -110,7 +111,7 @@ nav {
   }
   .circle {
     fill: none;
-    stroke-width: 11.5px; //controls the width of the time bar
+    stroke-width: 11.5008px; //controls the width of the time bar
     stroke: #f87070;
   }
   .circle-bg {
@@ -139,4 +140,18 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20.4375rem;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #161932;
+    }
+    img {
+      height: 14px;
+      width: 14px;
+    }
+  }
 }
