@@ -76,8 +76,7 @@ nav {
 
 .pomodoro-container {
   background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-  box-shadow: -3.125rem -3.125rem 6.25rem #272c5a,
-    3.125rem 3.125rem 6.25rem #121530;
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
   border-radius: 50%;
   width: 18.75rem; //the image and scales nicely here due to viewbox
   height: 18.75rem;
