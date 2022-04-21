@@ -288,7 +288,6 @@ nav ul .selected {
   margin: auto;
   margin-top: 1.5rem;
   border-top: #e3e1e1 1px solid;
-  letter-spacing: 0.2644rem;
 }
 
 .modal section .circle-selection .container {
@@ -309,6 +308,7 @@ nav ul .selected {
 .modal section .circle-selection h4 {
   font-size: 0.6875rem;
   text-align: center;
+  letter-spacing: 0.2644rem;
 }
 
 .modal section .circle-selection .circle-font {
@@ -328,6 +328,10 @@ nav ul .selected {
   letter-spacing: 0;
   font-size: 15px;
   font-weight: 700;
+}
+
+.modal section .circle-selection .circle-font:hover {
+  cursor: pointer;
 }
 
 .modal section .circle-selection .selected {
