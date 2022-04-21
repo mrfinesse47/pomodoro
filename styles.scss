@@ -140,18 +140,36 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 20.4375rem;
+  border-radius: 15px;
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: #e3e1e1 1px solid;
+
     h2 {
       font-size: 1.25rem;
       font-weight: 700;
       color: #161932;
+      margin: 1.5rem;
     }
     img {
       height: 0.875rem;
       width: 0.875rem;
+      margin: 29px 24px;
+    }
+    img:hover {
+      cursor: pointer;
+    }
+  }
+  section {
+    h3 {
+      margin-top: 24px;
+      margin-bottom: 18px;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 4.23077px;
+      font-weight: 700;
     }
   }
 }

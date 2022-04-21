@@ -187,6 +187,7 @@ nav ul .selected {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 20.4375rem;
+  border-radius: 15px;
 }
 
 .modal header {
@@ -199,16 +200,32 @@ nav ul .selected {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: #e3e1e1 1px solid;
 }
 
 .modal header h2 {
   font-size: 1.25rem;
   font-weight: 700;
   color: #161932;
+  margin: 1.5rem;
 }
 
 .modal header img {
   height: 0.875rem;
   width: 0.875rem;
+  margin: 29px 24px;
+}
+
+.modal header img:hover {
+  cursor: pointer;
+}
+
+.modal section h3 {
+  margin-top: 24px;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 4.23077px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */
