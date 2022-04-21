@@ -275,12 +275,19 @@ nav ul .selected {
           flex-direction: column;
 }
 
-.modal section .selection .stepper img:first-child {
+.modal section .selection .stepper svg {
+  stroke: #1e213f;
+  stroke-opacity: 0.25;
+}
+
+.modal section .selection .stepper svg:first-child {
   margin-bottom: 0.5625rem;
 }
 
-.modal section .selection .stepper img:hover {
+.modal section .selection .stepper svg:hover {
   cursor: pointer;
+  stroke: #1e213f;
+  stroke-opacity: 1;
 }
 
 .modal section .circle-selection {
@@ -332,6 +339,14 @@ nav ul .selected {
 
 .modal section .circle-selection .circle-font:hover {
   cursor: pointer;
+  outline-style: solid;
+  outline-offset: 4px;
+  outline-color: #eff1fa;
+}
+
+.modal section .circle-selection .circle-font.selected:hover {
+  outline-style: none;
+  cursor: auto;
 }
 
 .modal section .circle-selection .selected {

@@ -197,11 +197,17 @@ nav {
           display: flex;
           flex-direction: column;
         }
-        img:first-child {
+        svg {
+          stroke: #1e213f;
+          stroke-opacity: 0.25;
+        }
+        svg:first-child {
           margin-bottom: 0.5625rem;
         }
-        img:hover {
+        svg:hover {
           cursor: pointer;
+          stroke: #1e213f;
+          stroke-opacity: 1;
         }
       }
     }
@@ -237,6 +243,13 @@ nav {
       }
       .circle-font:hover {
         cursor: pointer;
+        outline-style: solid;
+        outline-offset: 4px;
+        outline-color: #eff1fa;
+      }
+      .circle-font.selected:hover {
+        outline-style: none;
+        cursor: auto;
       }
       .selected {
         background-color: #161932;
