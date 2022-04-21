@@ -200,6 +200,20 @@ nav {
         img:first-child {
           margin-bottom: 0.5625rem;
         }
+        img:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .circle-selection {
+      width: 280px;
+      margin: auto;
+      margin-top: 1.5rem;
+      border-top: #e3e1e1 1px solid;
+      letter-spacing: 4.23077px;
+      h4 {
+        font-size: 11px;
+        text-align: center;
       }
     }
   }

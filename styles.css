@@ -279,4 +279,21 @@ nav ul .selected {
 .modal section .selection .stepper img:first-child {
   margin-bottom: 0.5625rem;
 }
+
+.modal section .selection .stepper img:hover {
+  cursor: pointer;
+}
+
+.modal section .circle-selection {
+  width: 280px;
+  margin: auto;
+  margin-top: 1.5rem;
+  border-top: #e3e1e1 1px solid;
+  letter-spacing: 4.23077px;
+}
+
+.modal section .circle-selection h4 {
+  font-size: 11px;
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */
