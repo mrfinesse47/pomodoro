@@ -221,11 +221,62 @@ nav ul .selected {
 }
 
 .modal section h3 {
-  margin-top: 24px;
-  margin-bottom: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 1.125rem;
   text-align: center;
-  font-size: 11px;
-  letter-spacing: 4.23077px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.2644rem;
   font-weight: 700;
+}
+
+.modal section .selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0rem 1.5rem 0.5rem;
+}
+
+.modal section .selection h4 {
+  font-size: 0.75rem;
+  color: #1c1c1f;
+  opacity: 0.4;
+}
+
+.modal section .selection .stepper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #eff1fa;
+  padding: 0.5313rem 1rem;
+  width: 6.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.625rem;
+  color: #1e213f;
+}
+
+.modal section .selection .stepper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal section .selection .stepper img:first-child {
+  margin-bottom: 0.5625rem;
 }
 /*# sourceMappingURL=styles.css.map */
