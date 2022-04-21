@@ -96,7 +96,7 @@ nav {
     align-items: center;
   }
   h1 {
-    font-family: sans-serif;
+    // font-family: sans-serif;
     align-self: center;
     color: #d7e0ff;
   }
@@ -210,10 +210,42 @@ nav {
       margin: auto;
       margin-top: 1.5rem;
       border-top: #e3e1e1 1px solid;
-      letter-spacing: 4.23077px;
+      letter-spacing: 0.2644rem;
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 152px;
+        margin: 0 auto;
+      }
       h4 {
-        font-size: 11px;
+        font-size: 0.6875rem;
         text-align: center;
+      }
+      .circle-font {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: #eff1fa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        letter-spacing: 0;
+        font-size: 15px;
+        font-weight: 700;
+      }
+      .selected {
+        background-color: #161932;
+        color: #ffffff;
+      }
+      #kumbah-sans {
+        font-family: "Kumbh Sans", sans-serif;
+      }
+      #roboto-slab {
+        font-family: "Roboto Slab", serif;
+      }
+      #space-mono {
+        font-family: "Space Mono", monospace;
       }
     }
   }

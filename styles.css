@@ -134,7 +134,6 @@ nav ul .selected {
 }
 
 .pomodoro-container h1 {
-  font-family: sans-serif;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -289,11 +288,62 @@ nav ul .selected {
   margin: auto;
   margin-top: 1.5rem;
   border-top: #e3e1e1 1px solid;
-  letter-spacing: 4.23077px;
+  letter-spacing: 0.2644rem;
+}
+
+.modal section .circle-selection .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 152px;
+  margin: 0 auto;
 }
 
 .modal section .circle-selection h4 {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
+}
+
+.modal section .circle-selection .circle-font {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: #eff1fa;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.modal section .circle-selection .selected {
+  background-color: #161932;
+  color: #ffffff;
+}
+
+.modal section .circle-selection #kumbah-sans {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.modal section .circle-selection #roboto-slab {
+  font-family: "Roboto Slab", serif;
+}
+
+.modal section .circle-selection #space-mono {
+  font-family: "Space Mono", monospace;
 }
 /*# sourceMappingURL=styles.css.map */
