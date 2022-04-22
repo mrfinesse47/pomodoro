@@ -398,8 +398,8 @@ nav ul .selected {
 }
 
 .modal section .circle-selection img {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .modal section .circle-selection #tomato {
@@ -412,5 +412,30 @@ nav ul .selected {
 
 .modal section .circle-selection #purple {
   background: #d881f8;
+}
+
+.modal .apply {
+  background-color: #f87070;
+  color: #ffffff;
+  border-radius: 1.6563rem;
+  width: 8.75rem;
+  font-size: 1rem;
+  height: 3.3125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  position: relative;
+  top: 1.5625rem;
+}
+
+.modal .apply:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */
