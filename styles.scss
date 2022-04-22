@@ -264,6 +264,41 @@ nav {
       #space-mono {
         font-family: "Space Mono", monospace;
       }
+      .circle-color {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .circle-color img {
+        display: none;
+      }
+      .circle-color.selected img {
+        display: block;
+      }
+      .circle-color:hover {
+        cursor: pointer;
+      }
+      .circle-color.selected:hover {
+        cursor: auto;
+      }
+
+      img {
+        width: 16px;
+        height: 16px;
+      }
+
+      #tomato {
+        background: #f87070;
+      }
+      #aqua {
+        background: #70f3f8;
+      }
+      #purple {
+        background: #d881f8;
+      }
     }
   }
 }
