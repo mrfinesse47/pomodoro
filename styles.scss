@@ -65,10 +65,12 @@ nav {
       cursor: pointer;
     }
 
-    .selected {
-      opacity: 1;
-      background-color: #f87070;
+    li.selected:hover {
+      cursor: auto;
+    }
 
+    .selected {
+      background-color: #f87070;
       color: #1e213f;
     }
   }
@@ -293,11 +295,30 @@ nav {
       #tomato {
         background: #f87070;
       }
+      #tomato:hover:not(.selected) {
+        cursor: pointer;
+        outline-style: solid;
+        outline-offset: 4px;
+        outline-color: #f87070;
+      }
       #aqua {
         background: #70f3f8;
       }
+      #aqua:hover {
+        cursor: pointer;
+        outline-style: solid;
+        outline-offset: 4px;
+        outline-color: #70f3f8;
+      }
       #purple {
         background: #d881f8;
+      }
+
+      #purple:hover:not(.selected) {
+        cursor: pointer;
+        outline-style: solid;
+        outline-offset: 4px;
+        outline-color: #d881f8;
       }
     }
   }
@@ -317,5 +338,6 @@ nav {
   }
   .apply:hover {
     cursor: pointer;
+    background-color: #ff868a;
   }
 }

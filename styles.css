@@ -90,8 +90,11 @@ nav ul li:hover {
   cursor: pointer;
 }
 
+nav ul li.selected:hover {
+  cursor: auto;
+}
+
 nav ul .selected {
-  opacity: 1;
   background-color: #f87070;
   color: #1e213f;
 }
@@ -406,12 +409,33 @@ nav ul .selected {
   background: #f87070;
 }
 
+.modal section .circle-selection #tomato:hover:not(.selected) {
+  cursor: pointer;
+  outline-style: solid;
+  outline-offset: 4px;
+  outline-color: #f87070;
+}
+
 .modal section .circle-selection #aqua {
   background: #70f3f8;
 }
 
+.modal section .circle-selection #aqua:hover {
+  cursor: pointer;
+  outline-style: solid;
+  outline-offset: 4px;
+  outline-color: #70f3f8;
+}
+
 .modal section .circle-selection #purple {
   background: #d881f8;
+}
+
+.modal section .circle-selection #purple:hover:not(.selected) {
+  cursor: pointer;
+  outline-style: solid;
+  outline-offset: 4px;
+  outline-color: #d881f8;
 }
 
 .modal .apply {
@@ -437,5 +461,6 @@ nav ul .selected {
 
 .modal .apply:hover {
   cursor: pointer;
+  background-color: #ff868a;
 }
 /*# sourceMappingURL=styles.css.map */
