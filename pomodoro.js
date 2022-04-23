@@ -29,6 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
   //adding click listeners
   const modalCloseButton = document.getElementById("modal-close");
   modalCloseButton.onclick = () => closeModal();
+  const modalOpenButton = document.getElementById("open-modal");
+  modalOpenButton.onclick = () => openModal();
 });
 
 //-------------------------------------------------------------//
@@ -74,6 +76,15 @@ function closeModal() {
   console.log("closing modal");
   const modal = document.getElementById("modal");
   modal.classList.toggle("hidden");
+}
+
+//open modal
+
+function openModal() {
+  console.log("opening modal");
+  const modal = document.getElementById("modal");
+  modal.classList.toggle("hidden");
+  //document.getElementById("open-modal");
 }
 
 //-------------------------------------------------------------//
