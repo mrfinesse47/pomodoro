@@ -12,6 +12,7 @@ let totalTime = 10 * MINUTE; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
 let interval = null;
+let selectedColor = "#f87070";
 
 //-------------------------------------------------------------//
 
@@ -19,6 +20,16 @@ let interval = null;
 
 updatePomodoroDOM();
 interval = window.setInterval(decrementTimeRemaining, 1000);
+
+//-------------------------------------------------------------//
+
+//-DOM initilization onReady-----------------------------------//
+
+document.addEventListener("DOMContentLoaded", () => {
+  //adding click listeners
+  const modalCloseButton = document.getElementById("modal-close");
+  modalCloseButton.onclick = closeModal;
+});
 
 //-------------------------------------------------------------//
 
@@ -52,9 +63,15 @@ function updatePomodoroDOM() {
   } else {
     if (pomodoroEL.style.stroke === "none") {
       //only add to DOM if it is set to none
-      pomodoroEL.style.stroke = "#f87070";
+      pomodoroEL.style.stroke = selectedColor;
     }
   }
+}
+
+//close modal
+
+function closeModal() {
+  console.log("closing modal");
 }
 
 //-------------------------------------------------------------//

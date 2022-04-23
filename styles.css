@@ -16,6 +16,10 @@ li {
   padding: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .title {
   font-weight: 700;
   font-size: 1.5rem;
