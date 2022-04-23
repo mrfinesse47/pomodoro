@@ -28,7 +28,7 @@ interval = window.setInterval(decrementTimeRemaining, 1000);
 document.addEventListener("DOMContentLoaded", () => {
   //adding click listeners
   const modalCloseButton = document.getElementById("modal-close");
-  modalCloseButton.onclick = closeModal;
+  modalCloseButton.onclick = () => closeModal();
 });
 
 //-------------------------------------------------------------//
@@ -72,6 +72,8 @@ function updatePomodoroDOM() {
 
 function closeModal() {
   console.log("closing modal");
+  const modal = document.getElementById("modal");
+  modal.classList.toggle("hidden");
 }
 
 //-------------------------------------------------------------//
