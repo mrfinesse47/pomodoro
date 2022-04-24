@@ -81,10 +81,8 @@ function closeModal() {
 //open modal
 
 function openModal() {
-  console.log("opening modal");
   const modal = document.getElementById("modal");
   modal.classList.toggle("hidden");
-  //document.getElementById("open-modal");
 }
 
 //-------------------------------------------------------------//

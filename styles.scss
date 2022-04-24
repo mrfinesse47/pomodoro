@@ -10,7 +10,8 @@ body {
 p,
 ul,
 h2,
-li {
+li,
+input {
   margin: 0;
   padding: 0;
 }
@@ -195,9 +196,24 @@ nav {
         background-color: #eff1fa;
         padding: 0.5313rem 1rem;
         width: 6.75rem;
-        font-size: 0.875rem;
+
         border-radius: 0.625rem;
         color: #1e213f;
+
+        input {
+          border-style: none;
+          background-color: #eff1fa;
+          width: 5.5rem;
+          padding-top: 6px;
+          font-size: 0.875rem;
+          font-weight: 700;
+          font-family: "Kumbh Sans", sans-serif;
+          color: #1e213f;
+        }
+
+        input:focus {
+          outline: none;
+        }
 
         div {
           display: flex;
