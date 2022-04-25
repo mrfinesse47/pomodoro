@@ -73,8 +73,9 @@ function updatePomodoroDOM() {
 //close modal
 
 function closeModal() {
-  console.log("closing modal");
   const modal = document.getElementById("modal");
+  const timerView = document.getElementById("timer-view");
+  timerView.style.opacity = "1";
   modal.classList.toggle("hidden");
 }
 
@@ -82,6 +83,8 @@ function closeModal() {
 
 function openModal() {
   const modal = document.getElementById("modal");
+  const timerView = document.getElementById("timer-view");
+  timerView.style.opacity = "0.5";
   modal.classList.toggle("hidden");
 }
 

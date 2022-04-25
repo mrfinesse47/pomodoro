@@ -22,9 +22,11 @@
 
     <link rel="stylesheet" href="./styles.css" />
 
+
     <title>Pomodoro app</title>
   </head>
   <body>
+    <div id="timer-view">
     <header class="title">
       <h1>pomodoro</h1>
     </header>
@@ -85,11 +87,13 @@
         id="open-modal"
       />
     </footer>
-    <script src="./pomodoro.js"></script>
+
+  </div>
+  
 
     <!-- settings modal -->
 
-    <aside class="modal" id="modal">
+    <aside class="modal hidden" id="modal">
       <header>
         <h2>Settings</h2>
         <img src="./assets/icon-close.svg" alt="close" id="modal-close" />
@@ -170,5 +174,6 @@
         <span>Apply</span>
       </div>
     </aside>
+    <script src="./pomodoro.js"></script>
   </body>
 </html>
