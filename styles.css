@@ -248,9 +248,10 @@ nav ul .selected {
   margin: 0rem 1.5rem 0.5rem;
 }
 
-.modal section .selection h4 {
+.modal section .selection label {
   font-size: 0.75rem;
-  color: #1c1c1f;
+  font-weight: 700;
+  color: #1e213f;
   opacity: 0.4;
 }
 
