@@ -13,6 +13,17 @@ let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
 let interval = null;
 let selectedColor = "#f87070";
+let isModalOpen = false;
+
+const color = { purple: "" }; //going to define hex values
+const font = { kumbahSans: '"Kumbh Sans", sans-serif' }; //going to say "Kumbh Sans", sans-serif etc.
+
+//modal options
+
+const modalOptions = {
+  color: color.purple,
+  font: kumbahSans,
+};
 
 //-------------------------------------------------------------//
 
@@ -73,6 +84,7 @@ function updatePomodoroDOM() {
 //close modal
 
 function closeModal() {
+  isModalOpen = false;
   const modal = document.getElementById("modal");
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "1";
@@ -82,6 +94,7 @@ function closeModal() {
 //open modal
 
 function openModal() {
+  isModalOpen = true;
   const modal = document.getElementById("modal");
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
