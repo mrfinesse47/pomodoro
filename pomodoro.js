@@ -16,7 +16,11 @@ let selectedColor = "#f87070";
 let isModalOpen = false;
 
 const color = { purple: "" }; //going to define hex values
-const font = { kumbahSans: '"Kumbh Sans", sans-serif' }; //going to say "Kumbh Sans", sans-serif etc.
+const font = {
+  kumbahSans: '"Kumbh Sans", sans-serif',
+  robotoSlab: "font-family: 'Roboto Slab', serif",
+  monoSpace: "font-family: 'Space Mono', monospace;",
+};
 
 //modal options
 
