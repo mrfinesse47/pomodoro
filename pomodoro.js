@@ -26,7 +26,7 @@ const font = {
 
 const modalOptions = {
   color: color.purple,
-  font: kumbahSans,
+  font: font.kumbahSans,
 };
 
 //-------------------------------------------------------------//
