@@ -15,7 +15,7 @@ let interval = null;
 let selectedColor = "#f87070";
 let isModalOpen = false;
 
-const color = { purple: "" }; //going to define hex values
+const color = { purple: "#f87070" }; //going to define hex values
 const font = {
   kumbahSans: '"Kumbh Sans", sans-serif',
   robotoSlab: "font-family: 'Roboto Slab', serif",

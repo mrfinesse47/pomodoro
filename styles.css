@@ -427,33 +427,33 @@ nav ul .selected {
   height: 1rem;
 }
 
-.modal section .circle-selection #tomato {
+.modal section .circle-selection #color-tomato {
   background: #f87070;
 }
 
-.modal section .circle-selection #tomato:hover:not(.selected) {
+.modal section .circle-selection #color-tomato:hover:not(.selected) {
   cursor: pointer;
   outline-style: solid;
   outline-offset: 4px;
   outline-color: #f87070;
 }
 
-.modal section .circle-selection #aqua {
+.modal section .circle-selection #color-aqua {
   background: #70f3f8;
 }
 
-.modal section .circle-selection #aqua:hover {
+.modal section .circle-selection #color-aqua:hover {
   cursor: pointer;
   outline-style: solid;
   outline-offset: 4px;
   outline-color: #70f3f8;
 }
 
-.modal section .circle-selection #purple {
+.modal section .circle-selection #color-purple {
   background: #d881f8;
 }
 
-.modal section .circle-selection #purple:hover:not(.selected) {
+.modal section .circle-selection #color-purple:hover:not(.selected) {
   cursor: pointer;
   outline-style: solid;
   outline-offset: 4px;

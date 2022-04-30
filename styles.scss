@@ -320,29 +320,29 @@ nav {
         height: 1rem;
       }
 
-      #tomato {
+      #color-tomato {
         background: #f87070;
       }
-      #tomato:hover:not(.selected) {
+      #color-tomato:hover:not(.selected) {
         cursor: pointer;
         outline-style: solid;
         outline-offset: 4px;
         outline-color: #f87070;
       }
-      #aqua {
+      #color-aqua {
         background: #70f3f8;
       }
-      #aqua:hover {
+      #color-aqua:hover {
         cursor: pointer;
         outline-style: solid;
         outline-offset: 4px;
         outline-color: #70f3f8;
       }
-      #purple {
+      #color-purple {
         background: #d881f8;
       }
 
-      #purple:hover:not(.selected) {
+      #color-purple:hover:not(.selected) {
         cursor: pointer;
         outline-style: solid;
         outline-offset: 4px;
