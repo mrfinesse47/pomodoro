@@ -141,10 +141,13 @@ nav ul .selected {
 }
 
 .pomodoro-container h1 {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   color: #d7e0ff;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 99px;
+  letter-spacing: -4px;
+  text-align: left;
 }
 
 .pomodoro-container svg {

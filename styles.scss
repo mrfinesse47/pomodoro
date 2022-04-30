@@ -104,8 +104,15 @@ nav {
   }
   h1 {
     // font-family: sans-serif;
-    align-self: center;
+
     color: #d7e0ff;
+
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 99px;
+    letter-spacing: -4px;
+    text-align: left;
   }
   svg {
     position: absolute;

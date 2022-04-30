@@ -74,6 +74,9 @@ function updatePomodoroDOM() {
     percentRemaining * 0.01 * 2 * PI * RADIUS //(100-percentage) to count up
   }, 36000`;
   timeRemainingEL.innerText = timeRemaining;
+  timeRemainingEL.innerText = new Date(timeRemaining * 1000)
+    .toISOString()
+    .slice(14, 19);
   if (timeRemaining === 0) {
     //remove on time 0
     pomodoroEL.style.stroke = "none";
