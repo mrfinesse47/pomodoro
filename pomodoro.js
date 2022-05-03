@@ -69,14 +69,18 @@ function decrementTimeRemaining() {
 
 function updatePomodoroDOM() {
   const pomodoroEL = document.getElementById("pomodoro-time");
-  const timeRemainingEL = document.getElementById("time-remaining");
+  const timeRemainingLeft = document.getElementById("time-remaining-left");
+  const timeRemainingRight = document.getElementById("time-remaining-right");
   pomodoroEL.style.strokeDasharray = `${
     percentRemaining * 0.01 * 2 * PI * RADIUS //(100-percentage) to count up
   }, 36000`;
-  timeRemainingEL.innerText = timeRemaining;
-  timeRemainingEL.innerText = new Date(timeRemaining * 1000)
+  const timeRemainingStr = new Date(timeRemaining * 1000)
     .toISOString()
     .slice(14, 19);
+  //14->19
+  console.log(timeRemainingStr);
+  timeRemainingLeft.innerHTML = timeRemainingStr.slice(0, 2);
+  timeRemainingRight.innerHTML = timeRemainingStr.slice(3, 5);
   if (timeRemaining === 0) {
     //remove on time 0
     pomodoroEL.style.stroke = "none";

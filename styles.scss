@@ -99,14 +99,28 @@ nav {
     height: 89.267%;
     border-radius: 50%;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-  h1 {
-    // font-family: sans-serif;
-
     color: #d7e0ff;
+    font-size: 80px;
+    font-weight: 700;
+    .time-remaining {
+      width: 45%;
+    }
+    .colon {
+      width: auto;
+      text-align: center;
+    }
+    #time-remaining-left {
+      text-align: right;
+    }
+    #time-remaining-right {
+      text-align: left;
+    }
+  }
 
+  h1 {
     font-family: "Kumbh Sans", sans-serif;
     font-size: 80px;
     font-weight: 700;

@@ -132,16 +132,39 @@ nav ul .selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #d7e0ff;
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.pomodoro-container .inner-container .time-remaining {
+  width: 45%;
+}
+
+.pomodoro-container .inner-container .colon {
+  width: auto;
+  text-align: center;
+}
+
+.pomodoro-container .inner-container #time-remaining-left {
+  text-align: right;
+}
+
+.pomodoro-container .inner-container #time-remaining-right {
+  text-align: left;
 }
 
 .pomodoro-container h1 {
-  color: #d7e0ff;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 80px;
   font-weight: 700;
