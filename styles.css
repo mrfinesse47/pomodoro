@@ -146,6 +146,7 @@ nav ul .selected {
 }
 
 .pomodoro-container .inner-container .time-container {
+  padding-top: 4%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -167,7 +168,7 @@ nav ul .selected {
 
 .pomodoro-container .inner-container .pause-button {
   text-align: center;
-  padding-left: 15.5px;
+  padding-left: 13.5px;
   letter-spacing: 0.8203rem;
   font-weight: 700;
   font-size: 0.875rem;
