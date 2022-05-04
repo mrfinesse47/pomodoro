@@ -8,19 +8,19 @@ const MINUTE = 60;
 
 //-global vars ------------------------------------------------//
 
-let totalTime = 10 * MINUTE; //in seconds
-let timeRemaining = totalTime;
-let percentRemaining = (timeRemaining / totalTime) * 100;
-let interval = null;
-let selectedColor = "#f87070";
-let isModalOpen = false;
-
-const color = { purple: "#f87070" }; //going to define hex values
+const color = { purple: "#f87070", tomato: "#f87070", aqua: "#70f3f8" }; //going to define hex values
 const font = {
   kumbahSans: '"Kumbh Sans", sans-serif',
   robotoSlab: "font-family: 'Roboto Slab', serif",
   monoSpace: "font-family: 'Space Mono', monospace;",
 };
+
+let totalTime = 10 * MINUTE; //in seconds
+let timeRemaining = totalTime;
+let percentRemaining = (timeRemaining / totalTime) * 100;
+let interval = null;
+let selectedColor = color.purple;
+let isModalOpen = false;
 
 //modal options
 
@@ -77,8 +77,6 @@ function updatePomodoroDOM() {
   const timeRemainingStr = new Date(timeRemaining * 1000)
     .toISOString()
     .slice(14, 19);
-  //14->19
-  console.log(timeRemainingStr);
   timeRemainingLeft.innerHTML = timeRemainingStr.slice(0, 2);
   timeRemainingRight.innerHTML = timeRemainingStr.slice(3, 5);
   if (timeRemaining === 0) {
