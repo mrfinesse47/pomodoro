@@ -132,6 +132,24 @@ nav ul .selected {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #d7e0ff;
+}
+
+.pomodoro-container .inner-container .time-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -142,9 +160,19 @@ nav ul .selected {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #d7e0ff;
-  font-size: 80px;
+  font-size: 5rem;
   font-weight: 700;
+  letter-spacing: -4px;
+}
+
+.pomodoro-container .inner-container .pause-button {
+  text-align: center;
+  padding-left: 15.5px;
+  letter-spacing: 0.8203rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.8203rem;
 }
 
 .pomodoro-container .inner-container .time-remaining {
