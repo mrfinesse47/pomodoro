@@ -55,11 +55,17 @@ document.addEventListener("DOMContentLoaded", () => {
   //adding modal click listeners
 
   const selectKumbahSans = document.getElementById("kumbah-sans");
-  selectKumbahSans.onclick = selectModalOption;
+  selectKumbahSans.onclick = selectFontPendingOption;
   const selectRobotoSlab = document.getElementById("roboto-slab");
-  selectRobotoSlab.onclick = selectModalOption;
+  selectRobotoSlab.onclick = selectFontPendingOption;
   const selectMonoSpace = document.getElementById("mono-space");
-  selectMonoSpace.onclick = selectModalOption;
+  selectMonoSpace.onclick = selectFontPendingOption;
+  const selectPurple = document.getElementById("color-purple");
+  selectPurple.onclick = selectColorPendingOption;
+  const selectTomato = document.getElementById("color-tomato");
+  selectTomato.onclick = selectColorPendingOption;
+  const selectAqua = document.getElementById("color-aqua");
+  selectAqua.onclick = selectColorPendingOption;
 });
 
 //-------------------------------------------------------------//
@@ -90,7 +96,7 @@ function updatePomodoroDOM() {
   }, 36000`;
   const timeRemainingStr = new Date(timeRemaining * 1000)
     .toISOString()
-    .slice(14, 19);
+    .slice(14, 19); //no need for moment.js
   timeRemainingLeft.innerHTML = timeRemainingStr.slice(0, 2);
   timeRemainingRight.innerHTML = timeRemainingStr.slice(3, 5);
   if (timeRemaining === 0) {
@@ -126,9 +132,11 @@ function openModal() {
 
 //modal click handlers
 
-function selectModalOption() {
-  //modalOptions.font = font.kumbahSans;
-  console.log("hi");
+function selectFontPendingOption() {
+  console.log(this.id);
+}
+
+function selectColorPendingOption() {
   console.log(this.id);
 }
 
