@@ -29,6 +29,11 @@ const modalOptions = {
   font: font.kumbahSans,
 };
 
+const pendingModalOptions = {
+  color: color.purple,
+  font: font.kumbahSans,
+};
+
 //-------------------------------------------------------------//
 
 //-initilization ----------------------------------------------//
@@ -46,6 +51,15 @@ document.addEventListener("DOMContentLoaded", () => {
   modalCloseButton.onclick = () => closeModal();
   const modalOpenButton = document.getElementById("open-modal");
   modalOpenButton.onclick = () => openModal();
+
+  //adding modal click listeners
+
+  const selectKumbahSans = document.getElementById("kumbah-sans");
+  selectKumbahSans.onclick = selectModalOption;
+  const selectRobotoSlab = document.getElementById("roboto-slab");
+  selectRobotoSlab.onclick = selectModalOption;
+  const selectMonoSpace = document.getElementById("mono-space");
+  selectMonoSpace.onclick = selectModalOption;
 });
 
 //-------------------------------------------------------------//
@@ -108,6 +122,14 @@ function openModal() {
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
   modal.classList.toggle("hidden");
+}
+
+//modal click handlers
+
+function selectModalOption() {
+  //modalOptions.font = font.kumbahSans;
+  console.log("hi");
+  console.log(this.id);
 }
 
 //-------------------------------------------------------------//
