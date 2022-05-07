@@ -148,6 +148,15 @@ function selectPendingOption() {
     case "mono-space":
       console.log("mono-space");
       break;
+    case "color-tomato":
+      console.log("tomato");
+      break;
+    case "color-aqua":
+      console.log("aqua");
+      break;
+    case "color-purple":
+      console.log("purple");
+      break;
     default:
       console.log("no match");
   }
