@@ -54,18 +54,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //adding modal click listeners
 
+  //listeners for time increase or decrease
+
+  //listeners for the color and font options
+
   const selectKumbahSans = document.getElementById("kumbah-sans");
-  selectKumbahSans.onclick = selectFontPendingOption;
+  selectKumbahSans.onclick = selectPendingOption;
   const selectRobotoSlab = document.getElementById("roboto-slab");
-  selectRobotoSlab.onclick = selectFontPendingOption;
+  selectRobotoSlab.onclick = selectPendingOption;
   const selectMonoSpace = document.getElementById("mono-space");
-  selectMonoSpace.onclick = selectFontPendingOption;
+  selectMonoSpace.onclick = selectPendingOption;
   const selectPurple = document.getElementById("color-purple");
-  selectPurple.onclick = selectColorPendingOption;
+  selectPurple.onclick = selectPendingOption;
   const selectTomato = document.getElementById("color-tomato");
-  selectTomato.onclick = selectColorPendingOption;
+  selectTomato.onclick = selectPendingOption;
   const selectAqua = document.getElementById("color-aqua");
-  selectAqua.onclick = selectColorPendingOption;
+  selectAqua.onclick = selectPendingOption;
 });
 
 //-------------------------------------------------------------//
@@ -132,12 +136,21 @@ function openModal() {
 
 //modal click handlers
 
-function selectFontPendingOption() {
-  console.log(this.id);
-}
-
-function selectColorPendingOption() {
-  console.log(this.id);
+function selectPendingOption() {
+  const option = this.id;
+  switch (option) {
+    case "kumbah-sans":
+      console.log("kumbah-sans");
+      break;
+    case "roboto-slab":
+      console.log("roboto-slab");
+      break;
+    case "mono-space":
+      console.log("mono-space");
+      break;
+    default:
+      console.log("no match");
+  }
 }
 
 //-------------------------------------------------------------//
