@@ -8,7 +8,7 @@ const MINUTE = 60;
 
 //-global vars ------------------------------------------------//
 
-const color = { purple: "#f87070", tomato: "#f87070", aqua: "#70f3f8" }; //going to define hex values
+const color = { purple: "#d881f8", tomato: "#f87070", aqua: "#70f3f8" }; //going to define hex values
 const font = {
   kumbahSans: '"Kumbh Sans", sans-serif',
   robotoSlab: "font-family: 'Roboto Slab', serif",
@@ -140,26 +140,30 @@ function selectPendingOption() {
   const option = this.id;
   switch (option) {
     case "kumbah-sans":
-      console.log("kumbah-sans");
+      pendingModalOptions.font = font.kumbahSans;
       break;
     case "roboto-slab":
-      console.log("roboto-slab");
+      pendingModalOptions.font = font.kumbahSans;
       break;
     case "mono-space":
-      console.log("mono-space");
+      pendingModalOptions.font = font.monoSpace;
       break;
     case "color-tomato":
-      console.log("tomato");
+      pendingModalOptions.color = color.tomato;
       break;
     case "color-aqua":
-      console.log("aqua");
+      pendingModalOptions.color = color.aqua;
       break;
     case "color-purple":
-      console.log("purple");
+      pendingModalOptions.color = color.purple;
       break;
     default:
-      console.log("no match");
+      console.log("error: no match");
   }
+
+  //update dom
+
+  console.log(pendingModalOptions);
 }
 
 //-------------------------------------------------------------//
