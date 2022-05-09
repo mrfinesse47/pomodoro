@@ -96,21 +96,27 @@ function selectPendingOption() {
   switch (option) {
     case "kumbah-sans":
       pendingModalOptions.font = font.kumbahSans;
+      changeSelection("font", option);
       break;
     case "roboto-slab":
       pendingModalOptions.font = font.kumbahSans;
+      changeSelection("font", option);
       break;
     case "mono-space":
       pendingModalOptions.font = font.monoSpace;
+      changeSelection("font", option);
       break;
     case "color-tomato":
       pendingModalOptions.color = color.tomato;
+      changeSelection("color", option);
       break;
     case "color-aqua":
       pendingModalOptions.color = color.aqua;
+      changeSelection("color", option);
       break;
     case "color-purple":
       pendingModalOptions.color = color.purple;
+      changeSelection("color", option);
       break;
     default:
       console.log("error: no match");
@@ -164,6 +170,17 @@ function openModal() {
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
   modal.classList.toggle("hidden");
+}
+
+//modal options
+
+function changeSelection(type, changeTo) {
+  const els = document.querySelectorAll(`.circle-${type}`);
+  els.forEach((el) => {
+    el.classList.remove("selected");
+  });
+  const elToSelect = document.getElementById(changeTo);
+  elToSelect.classList.add("selected");
 }
 
 //-------------------------------------------------------------//
