@@ -70,6 +70,10 @@ document.addEventListener("DOMContentLoaded", () => {
   selectTomato.onclick = selectPendingOption;
   const selectAqua = document.getElementById("color-aqua");
   selectAqua.onclick = selectPendingOption;
+
+  //modal submit button click listener
+  const applyButton = document.getElementById("apply");
+  applyButton.onclick = applyPendingModalOptions;
 });
 
 //-------------------------------------------------------------//
@@ -166,6 +170,7 @@ function closeModal() {
 
 function openModal() {
   isModalOpen = true;
+  //reset pending options to do
   const modal = document.getElementById("modal");
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
@@ -181,6 +186,12 @@ function changeSelection(type, changeTo) {
   });
   const elToSelect = document.getElementById(changeTo);
   elToSelect.classList.add("selected");
+}
+
+//apply modal pending options
+
+function applyPendingModalOptions() {
+  closeModal();
 }
 
 //-------------------------------------------------------------//
