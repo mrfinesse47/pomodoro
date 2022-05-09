@@ -89,6 +89,38 @@ function decrementTimeRemaining() {
 
 //-------------------------------------------------------------//
 
+//modal click handlers  ---------------------------------//
+
+function selectPendingOption() {
+  const option = this.id;
+  switch (option) {
+    case "kumbah-sans":
+      pendingModalOptions.font = font.kumbahSans;
+      break;
+    case "roboto-slab":
+      pendingModalOptions.font = font.kumbahSans;
+      break;
+    case "mono-space":
+      pendingModalOptions.font = font.monoSpace;
+      break;
+    case "color-tomato":
+      pendingModalOptions.color = color.tomato;
+      break;
+    case "color-aqua":
+      pendingModalOptions.color = color.aqua;
+      break;
+    case "color-purple":
+      pendingModalOptions.color = color.purple;
+      break;
+    default:
+      console.log("error: no match");
+  }
+
+  //update dom
+
+  console.log(pendingModalOptions);
+}
+
 //-DOM Manipulation functions ---------------------------------//
 
 function updatePomodoroDOM() {
@@ -132,38 +164,6 @@ function openModal() {
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
   modal.classList.toggle("hidden");
-}
-
-//modal click handlers
-
-function selectPendingOption() {
-  const option = this.id;
-  switch (option) {
-    case "kumbah-sans":
-      pendingModalOptions.font = font.kumbahSans;
-      break;
-    case "roboto-slab":
-      pendingModalOptions.font = font.kumbahSans;
-      break;
-    case "mono-space":
-      pendingModalOptions.font = font.monoSpace;
-      break;
-    case "color-tomato":
-      pendingModalOptions.color = color.tomato;
-      break;
-    case "color-aqua":
-      pendingModalOptions.color = color.aqua;
-      break;
-    case "color-purple":
-      pendingModalOptions.color = color.purple;
-      break;
-    default:
-      console.log("error: no match");
-  }
-
-  //update dom
-
-  console.log(pendingModalOptions);
 }
 
 //-------------------------------------------------------------//
