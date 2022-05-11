@@ -19,12 +19,12 @@ let totalTime = 10 * MINUTE; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
 let interval = null;
-let selectedColor = color.purple;
+//let selectedColor = color.purple;
 let isModalOpen = false;
 
 //modal options
 
-const modalOptions = {
+let modalOptions = {
   color: color.purple,
   font: font.kumbahSans,
 };
@@ -151,9 +151,17 @@ function updatePomodoroDOM() {
   } else {
     if (pomodoroEL.style.stroke === "none") {
       //only add to DOM if it is set to none
-      pomodoroEL.style.stroke = selectedColor;
+
+      updateColor(modalOptions.color);
     }
   }
+}
+
+//update color theme
+
+function updateColor(color) {
+  const pomodoroEL = document.getElementById("pomodoro-time");
+  pomodoroEL.style.stroke = color;
 }
 
 //close modal
@@ -191,6 +199,8 @@ function changeSelection(type, changeTo) {
 //apply modal pending options
 
 function applyPendingModalOptions() {
+  modalOptions = { ...pendingModalOptions };
+  updateColor(modalOptions.color);
   closeModal();
 }
 
