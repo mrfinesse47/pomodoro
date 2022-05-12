@@ -25,13 +25,13 @@ let isModalOpen = false;
 //modal options
 
 let modalOptions = {
-  color: color.purple,
-  font: font.kumbahSans,
+  color: "purple",
+  font: "kumbahSans",
 };
 
 let pendingModalOptions = {
-  color: color.purple,
-  font: font.kumbahSans,
+  color: "purple",
+  font: "kumbahSans",
 };
 
 //-------------------------------------------------------------//
@@ -99,27 +99,27 @@ function selectPendingOption() {
   const option = this.id;
   switch (option) {
     case "kumbah-sans":
-      pendingModalOptions.font = font.kumbahSans;
+      pendingModalOptions.font = "kumbahSans";
       changeSelection("font", option);
       break;
     case "roboto-slab":
-      pendingModalOptions.font = font.robotoSlab;
+      pendingModalOptions.font = "robotoSlab";
       changeSelection("font", option);
       break;
     case "mono-space":
-      pendingModalOptions.font = font.monoSpace;
+      pendingModalOptions.font = "monoSpace";
       changeSelection("font", option);
       break;
     case "color-tomato":
-      pendingModalOptions.color = color.tomato;
+      pendingModalOptions.color = "tomato";
       changeSelection("color", option);
       break;
     case "color-aqua":
-      pendingModalOptions.color = color.aqua;
+      pendingModalOptions.color = "aqua";
       changeSelection("color", option);
       break;
     case "color-purple":
-      pendingModalOptions.color = color.purple;
+      pendingModalOptions.color = "purple";
       changeSelection("color", option);
       break;
     default:
@@ -127,8 +127,6 @@ function selectPendingOption() {
   }
 
   //update dom
-
-  console.log(pendingModalOptions);
 }
 
 //modal helper functions
@@ -169,7 +167,7 @@ function updatePomodoroDOM() {
     if (pomodoroEL.style.stroke === "none") {
       //only add to DOM if it is set to none
 
-      updateColor(modalOptions.color);
+      updateColor(color[modalOptions.color]);
     }
   }
 }
@@ -207,6 +205,8 @@ function openModal() {
 //modal options
 
 function changeSelection(type, changeTo) {
+  console.log("type:" + type);
+  console.log("changeTo:" + changeTo);
   const els = document.querySelectorAll(`.circle-${type}`);
   els.forEach((el) => {
     el.classList.remove("selected");
@@ -219,6 +219,21 @@ function changeSelection(type, changeTo) {
 
 function updateModalSelectionsDOM(pendingModalOptions) {
   console.log(pendingModalOptions);
+  for (key in pendingModalOptions) {
+    const idToSelect = camelToKebabCase(pendingModalOptions[key]);
+    if (key === "color") {
+      return changeSelection(key, `color-${idToSelect}`);
+    }
+    changeSelection(key, idToSelect);
+  }
 }
 
 //-------------------------------------------------------------//
+
+//--general utility functions----------------------------------//
+
+function camelToKebabCase(str) {
+  return str.replace(/[A-Z]/g, (c) => {
+    return "-" + c.toLowerCase();
+  });
+}
