@@ -29,7 +29,7 @@ let modalOptions = {
   font: font.kumbahSans,
 };
 
-const pendingModalOptions = {
+let pendingModalOptions = {
   color: color.purple,
   font: font.kumbahSans,
 };
@@ -103,7 +103,7 @@ function selectPendingOption() {
       changeSelection("font", option);
       break;
     case "roboto-slab":
-      pendingModalOptions.font = font.kumbahSans;
+      pendingModalOptions.font = font.robotoSlab;
       changeSelection("font", option);
       break;
     case "mono-space":
@@ -129,6 +129,23 @@ function selectPendingOption() {
   //update dom
 
   console.log(pendingModalOptions);
+}
+
+//modal helper functions
+
+//apply modal pending options
+
+function applyPendingModalOptions() {
+  modalOptions = { ...pendingModalOptions };
+  updateColor(modalOptions.color);
+  closeModal();
+}
+
+//get modal pending from actual settings
+
+function getModalPendingFromActual() {
+  pendingModalOptions = { ...modalOptions };
+  //update dom based on pending
 }
 
 //-DOM Manipulation functions ---------------------------------//
@@ -177,6 +194,8 @@ function closeModal() {
 //open modal
 
 function openModal() {
+  getModalPendingFromActual();
+  updateModalSelectionsDOM(pendingModalOptions);
   isModalOpen = true;
   //reset pending options to do
   const modal = document.getElementById("modal");
@@ -196,12 +215,10 @@ function changeSelection(type, changeTo) {
   elToSelect.classList.add("selected");
 }
 
-//apply modal pending options
+//update modal DOM based on pending settings
 
-function applyPendingModalOptions() {
-  modalOptions = { ...pendingModalOptions };
-  updateColor(modalOptions.color);
-  closeModal();
+function updateModalSelectionsDOM(pendingModalOptions) {
+  console.log(pendingModalOptions);
 }
 
 //-------------------------------------------------------------//
