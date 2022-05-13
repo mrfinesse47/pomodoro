@@ -125,10 +125,9 @@ nav {
       letter-spacing: 0.8203rem;
     }
     .time-remaining {
-      width: 45%;
+      width: 42%;
     }
     .colon {
-      width: auto;
       text-align: center;
     }
     #time-remaining-left {
@@ -140,7 +139,7 @@ nav {
   }
 
   h1 {
-    font-family: "Kumbh Sans", sans-serif;
+    //font-family: "Kumbh Sans", sans-serif;
     font-size: 80px;
     font-weight: 700;
     line-height: 99px;
@@ -248,7 +247,7 @@ nav {
           padding-top: 6px;
           font-size: 0.875rem;
           font-weight: 700;
-          font-family: "Kumbh Sans", sans-serif;
+          // font-family: "Kumbh Sans", sans-serif;
           color: #1e213f;
         }
 
@@ -318,13 +317,13 @@ nav {
         background-color: #161932;
         color: #ffffff;
       }
-      #kumbah-sans {
+      #font-kumbah-sans {
         font-family: "Kumbh Sans", sans-serif;
       }
-      #roboto-slab {
+      #font-roboto-slab {
         font-family: "Roboto Slab", serif;
       }
-      #space-mono {
+      #font-mono-space {
         font-family: "Space Mono", monospace;
       }
       .circle-color {

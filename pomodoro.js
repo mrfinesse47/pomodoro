@@ -11,8 +11,8 @@ const MINUTE = 60;
 const color = { purple: "#d881f8", tomato: "#f87070", aqua: "#70f3f8" }; //going to define hex values
 const font = {
   kumbahSans: '"Kumbh Sans", sans-serif',
-  robotoSlab: "font-family: 'Roboto Slab', serif",
-  monoSpace: "font-family: 'Space Mono', monospace;",
+  robotoSlab: '"Roboto Slab", serif',
+  monoSpace: "'Space Mono', monospace",
 };
 
 let totalTime = 10 * MINUTE; //in seconds
@@ -135,7 +135,10 @@ function selectPendingOption() {
 
 function applyPendingModalOptions() {
   modalOptions = { ...pendingModalOptions };
+  console.log("modal options");
+  console.log(modalOptions);
   updateColor(modalOptions.color);
+  updateFont(modalOptions.font);
   closeModal();
 }
 
@@ -165,7 +168,6 @@ function updatePomodoroDOM() {
   } else {
     if (pomodoroEL.style.stroke === "none") {
       //only add to DOM if it is set to none
-
       updateColor(color[modalOptions.color]);
     }
   }
@@ -176,6 +178,29 @@ function updatePomodoroDOM() {
 function updateColor(color) {
   const pomodoroEL = document.getElementById("pomodoro-time");
   pomodoroEL.style.stroke = color;
+}
+
+//update font theme
+
+function updateFont(fontType) {
+  console.log(fontType);
+  const body = document.querySelector("body");
+  const timeContainer = document.querySelector(".time-container");
+
+  body.style.fontFamily = font[fontType];
+
+  if (fontType === "monoSpace") {
+    timeContainer.style.letterSpacing = "-10px";
+    timeContainer.style.fontWeight = "400";
+  } else if (fontType === "robotoSlab") {
+    timeContainer.style.fontWeight = "700";
+    timeContainer.style.letterSpacing = "0px";
+  } else {
+    timeContainer.style.letterSpacing = "-5px";
+    timeContainer.style.fontWeight = "700";
+  }
+
+  // console.log(body);
 }
 
 //close modal
@@ -204,8 +229,6 @@ function openModal() {
 //modal options
 
 function changeSelection(type, changeTo) {
-  console.log("type:" + type);
-  console.log("changeTo:" + changeTo);
   const els = document.querySelectorAll(`.circle-${type}`);
   els.forEach((el) => {
     el.classList.remove("selected");

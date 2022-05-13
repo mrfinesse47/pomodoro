@@ -177,11 +177,10 @@ nav ul .selected {
 }
 
 .pomodoro-container .inner-container .time-remaining {
-  width: 45%;
+  width: 42%;
 }
 
 .pomodoro-container .inner-container .colon {
-  width: auto;
   text-align: center;
 }
 
@@ -194,7 +193,6 @@ nav ul .selected {
 }
 
 .pomodoro-container h1 {
-  font-family: "Kumbh Sans", sans-serif;
   font-size: 80px;
   font-weight: 700;
   line-height: 99px;
@@ -334,7 +332,6 @@ nav ul .selected {
   padding-top: 6px;
   font-size: 0.875rem;
   font-weight: 700;
-  font-family: "Kumbh Sans", sans-serif;
   color: #1e213f;
 }
 
@@ -431,15 +428,15 @@ nav ul .selected {
   color: #ffffff;
 }
 
-.modal section .circle-selection #kumbah-sans {
+.modal section .circle-selection #font-kumbah-sans {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-.modal section .circle-selection #roboto-slab {
+.modal section .circle-selection #font-roboto-slab {
   font-family: "Roboto Slab", serif;
 }
 
-.modal section .circle-selection #space-mono {
+.modal section .circle-selection #font-mono-space {
   font-family: "Space Mono", monospace;
 }
 
