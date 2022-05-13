@@ -58,11 +58,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //listeners for the color and font options
 
-  const selectKumbahSans = document.getElementById("kumbah-sans");
+  const selectKumbahSans = document.getElementById("font-kumbah-sans");
   selectKumbahSans.onclick = selectPendingOption;
-  const selectRobotoSlab = document.getElementById("roboto-slab");
+  const selectRobotoSlab = document.getElementById("font-roboto-slab");
   selectRobotoSlab.onclick = selectPendingOption;
-  const selectMonoSpace = document.getElementById("mono-space");
+  const selectMonoSpace = document.getElementById("font-mono-space");
   selectMonoSpace.onclick = selectPendingOption;
   const selectPurple = document.getElementById("color-purple");
   selectPurple.onclick = selectPendingOption;
@@ -98,15 +98,15 @@ function decrementTimeRemaining() {
 function selectPendingOption() {
   const option = this.id;
   switch (option) {
-    case "kumbah-sans":
+    case "font-kumbah-sans":
       pendingModalOptions.font = "kumbahSans";
       changeSelection("font", option);
       break;
-    case "roboto-slab":
+    case "font-roboto-slab":
       pendingModalOptions.font = "robotoSlab";
       changeSelection("font", option);
       break;
-    case "mono-space":
+    case "font-mono-space":
       pendingModalOptions.font = "monoSpace";
       changeSelection("font", option);
       break;
@@ -143,7 +143,6 @@ function applyPendingModalOptions() {
 
 function getModalPendingFromActual() {
   pendingModalOptions = { ...modalOptions };
-  //update dom based on pending
 }
 
 //-DOM Manipulation functions ---------------------------------//
@@ -218,7 +217,6 @@ function changeSelection(type, changeTo) {
 //update modal DOM based on pending settings
 
 function updateModalSelectionsDOM(pendingModalOptions) {
-  console.log(pendingModalOptions);
   for (key in pendingModalOptions) {
     const idToSelect = camelToKebabCase(pendingModalOptions[key]);
     if (key === "color") {
