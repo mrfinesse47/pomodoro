@@ -219,10 +219,8 @@ function changeSelection(type, changeTo) {
 function updateModalSelectionsDOM(pendingModalOptions) {
   for (key in pendingModalOptions) {
     const idToSelect = camelToKebabCase(pendingModalOptions[key]);
-    if (key === "color") {
-      return changeSelection(key, `color-${idToSelect}`);
-    }
-    changeSelection(key, idToSelect);
+
+    changeSelection(key, `${key}-${idToSelect}`);
   }
 }
 
