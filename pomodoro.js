@@ -25,12 +25,12 @@ let isModalOpen = false;
 //modal options
 
 let modalOptions = {
-  color: "purple",
+  color: "tomato",
   font: "kumbahSans",
 };
 
 let pendingModalOptions = {
-  color: "purple",
+  color: "tomato",
   font: "kumbahSans",
 };
 
