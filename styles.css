@@ -122,7 +122,6 @@ nav ul .selected {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  z-index: -1;
 }
 
 .pomodoro-container .inner-container {
@@ -209,6 +208,10 @@ nav ul .selected {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.pomodoro-container svg:hover {
+  cursor: pointer;
 }
 
 .pomodoro-container .circle {

@@ -93,7 +93,7 @@ nav {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: -1;
+  //z-index: -1;
   .inner-container {
     background-color: #161932;
     width: 89.267%;
@@ -125,6 +125,7 @@ nav {
       line-height: 1.0625rem;
       letter-spacing: 0.8203rem;
     }
+
     .time-remaining {
       width: 42%;
     }
@@ -155,6 +156,9 @@ nav {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+  svg:hover {
+    cursor: pointer;
   }
   .circle {
     fill: none;

@@ -8,19 +8,20 @@ const MINUTE = 60;
 
 //-global vars ------------------------------------------------//
 
-const color = { purple: "#d881f8", tomato: "#f87070", aqua: "#70f3f8" }; //going to define hex values
+const color = { purple: "#d881f8", tomato: "#f87070", aqua: "#70f3f8" };
 const font = {
   kumbahSans: '"Kumbh Sans", sans-serif',
   robotoSlab: '"Roboto Slab", serif',
   monoSpace: "'Space Mono', monospace",
 };
 
+let mode = "pomodoro"; //initial mode will be pomodoro, other mode will be short or long break
 let totalTime = 10 * MINUTE; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
 let interval = null;
-//let selectedColor = color.purple;
 let isModalOpen = false;
+let isPaused = false;
 
 //modal options
 
@@ -51,8 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
   modalCloseButton.onclick = () => closeModal();
   const modalOpenButton = document.getElementById("open-modal");
   modalOpenButton.onclick = () => openModal();
+  const pomodoroContainer = document.querySelector(".pomodoro-container");
 
-  //adding modal click listeners
+  pomodoroContainer.onclick = () => {
+    togglePause();
+  };
+
+  function togglePause() {
+    isPaused = !isPaused;
+    //maybe change text to resume
+  }
 
   //listeners for time increase or decrease
 
@@ -81,13 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
 //-functions --------------------------------------------------//
 
 function decrementTimeRemaining() {
-  if (timeRemaining > 0) {
-    timeRemaining -= 1;
-    percentRemaining = (timeRemaining / totalTime) * 100;
-    updatePomodoroDOM();
-  } else {
-    //clear interval at time zero
-    window.clearInterval(interval);
+  if (!isPaused) {
+    if (timeRemaining > 0) {
+      timeRemaining -= 1;
+      percentRemaining = (timeRemaining / totalTime) * 100;
+      updatePomodoroDOM();
+    } else {
+      //clear interval at time zero
+      window.clearInterval(interval);
+    }
   }
 }
 
@@ -135,8 +146,6 @@ function selectPendingOption() {
 
 function applyPendingModalOptions() {
   modalOptions = { ...pendingModalOptions };
-  console.log("modal options");
-  console.log(modalOptions);
   updateColor(modalOptions.color);
   updateFont(modalOptions.font);
   closeModal();
@@ -178,12 +187,14 @@ function updatePomodoroDOM() {
 function updateColor(color) {
   const pomodoroEL = document.getElementById("pomodoro-time");
   pomodoroEL.style.stroke = color;
+  //update background color of current menu selection
+  const menuSelected = document.querySelector("nav ul .selected");
+  menuSelected.style.backgroundColor = color;
 }
 
 //update font theme
 
 function updateFont(fontType) {
-  console.log(fontType);
   const body = document.querySelector("body");
   const timeContainer = document.querySelector(".time-container");
 
@@ -199,8 +210,6 @@ function updateFont(fontType) {
     timeContainer.style.letterSpacing = "-5px";
     timeContainer.style.fontWeight = "700";
   }
-
-  // console.log(body);
 }
 
 //close modal
