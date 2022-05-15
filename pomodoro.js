@@ -94,8 +94,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function modalIncreaseOrDecreaseTime(id) {
   //the id is the parent, either pomodoro-minutes or short-break etc.
-  const upButton = document.querySelector(id, ".up");
+  const upButton = document.querySelector(`${id} .up`);
   console.log(upButton);
+  console.log(`${id} .up`);
+  upButton.onclick = () => {
+    console.log("clicked up");
+  };
 }
 
 //-------------------------------------------------------------//
