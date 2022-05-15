@@ -65,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //listeners for time increase or decrease
 
+  modalIncreaseOrDecreaseTime("#pomodoro-minutes");
+  //will csall again for the other 2
+
   //listeners for the color and font options
 
   const selectKumbahSans = document.getElementById("font-kumbah-sans");
@@ -84,6 +87,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const applyButton = document.getElementById("apply");
   applyButton.onclick = applyPendingModalOptions;
 });
+
+//helper functions for event subscription  --------------------//
+
+//modal event subscriber helper
+
+function modalIncreaseOrDecreaseTime(id) {
+  //the id is the parent, either pomodoro-minutes or short-break etc.
+  const upButton = document.querySelector(id, ".up");
+  console.log(upButton);
+}
 
 //-------------------------------------------------------------//
 
