@@ -177,19 +177,23 @@ nav ul .selected {
 }
 
 .pomodoro-container .inner-container .time-remaining {
-  width: 42%;
+  width: 45%;
+  padding-right: 0.75rem;
 }
 
 .pomodoro-container .inner-container .colon {
   text-align: center;
+  padding: 0;
 }
 
 .pomodoro-container .inner-container #time-remaining-left {
   text-align: right;
+  padding: 0;
 }
 
 .pomodoro-container .inner-container #time-remaining-right {
   text-align: left;
+  padding: 0;
 }
 
 .pomodoro-container h1 {
