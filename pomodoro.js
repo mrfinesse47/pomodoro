@@ -65,8 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //listeners for time increase or decrease
 
+  modalIncreaseOrDecreaseTime("#short-break-time");
+  modalIncreaseOrDecreaseTime("#long-break-time");
   modalIncreaseOrDecreaseTime("#pomodoro-minutes");
-  //will csall again for the other 2
 
   //listeners for the color and font options
 
