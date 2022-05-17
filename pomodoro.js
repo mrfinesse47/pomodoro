@@ -28,11 +28,13 @@ let isPaused = false;
 let modalOptions = {
   color: "tomato",
   font: "kumbahSans",
+  shortBreakTime: 5,
+  longBreakTime: 25,
+  pomodoroMinutes: 25,
 };
 
 let pendingModalOptions = {
-  color: "tomato",
-  font: "kumbahSans",
+  ...modalOptions,
 };
 
 //-------------------------------------------------------------//
@@ -96,8 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
 function modalIncreaseOrDecreaseTime(id) {
   //the id is the parent, either pomodoro-minutes or short-break etc.
   const upButton = document.querySelector(`${id} .up`);
-  console.log(upButton);
-  console.log(`${id} .up`);
   upButton.onclick = () => {
     console.log("clicked up");
   };
@@ -172,7 +172,9 @@ function applyPendingModalOptions() {
 //get modal pending from actual settings
 
 function getModalPendingFromActual() {
+  console.log("getModalPendingFromActual");
   pendingModalOptions = { ...modalOptions };
+  console.log(pendingModalOptions);
 }
 
 //-DOM Manipulation functions ---------------------------------//
@@ -246,7 +248,6 @@ function openModal() {
   getModalPendingFromActual();
   updateModalSelectionsDOM(pendingModalOptions);
   isModalOpen = true;
-  //reset pending options to do
   const modal = document.getElementById("modal");
   const timerView = document.getElementById("timer-view");
   timerView.style.opacity = "0.5";
@@ -267,10 +268,15 @@ function changeSelection(type, changeTo) {
 //update modal DOM based on pending settings
 
 function updateModalSelectionsDOM(pendingModalOptions) {
+  console.log(pendingModalOptions);
   for (key in pendingModalOptions) {
-    const idToSelect = camelToKebabCase(pendingModalOptions[key]);
-
-    changeSelection(key, `${key}-${idToSelect}`);
+    if (typeof pendingModalOptions[key] === "string") {
+      console.log("match");
+      const idToSelect = camelToKebabCase(pendingModalOptions[key]);
+      changeSelection(key, `${key}-${idToSelect}`);
+    } else {
+      //time params
+    }
   }
 }
 
