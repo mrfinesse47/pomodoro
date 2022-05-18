@@ -28,9 +28,7 @@ let isPaused = false;
 let modalOptions = {
   color: "tomato",
   font: "kumbahSans",
-  shortBreakTime: 5,
-  longBreakTime: 25,
-  pomodoroMinutes: 25,
+  time: { shortBreakTime: 5, longBreakTime: 25, pomodoroMinutes: 25 },
 };
 
 let pendingModalOptions = {
@@ -172,9 +170,7 @@ function applyPendingModalOptions() {
 //get modal pending from actual settings
 
 function getModalPendingFromActual() {
-  console.log("getModalPendingFromActual");
   pendingModalOptions = { ...modalOptions };
-  console.log(pendingModalOptions);
 }
 
 //-DOM Manipulation functions ---------------------------------//
@@ -268,14 +264,19 @@ function changeSelection(type, changeTo) {
 //update modal DOM based on pending settings
 
 function updateModalSelectionsDOM(pendingModalOptions) {
-  console.log(pendingModalOptions);
   for (key in pendingModalOptions) {
-    if (typeof pendingModalOptions[key] === "string") {
-      console.log("match");
+    if (key !== "time") {
       const idToSelect = camelToKebabCase(pendingModalOptions[key]);
       changeSelection(key, `${key}-${idToSelect}`);
     } else {
       //time params
+      const timeObj = pendingModalOptions[key];
+
+      for (tKey in timeObj) {
+        console.log(tKey);
+        console.log(timeObj[tKey]);
+      }
+      //need to update the time values
     }
   }
 }
