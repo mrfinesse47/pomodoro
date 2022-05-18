@@ -28,7 +28,7 @@ let isPaused = false;
 let modalOptions = {
   color: "tomato",
   font: "kumbahSans",
-  time: { shortBreakTime: 5, longBreakTime: 25, pomodoroMinutes: 25 },
+  time: { shortBreakTime: 10, longBreakTime: 25, pomodoroMinutes: 25 },
 };
 
 let pendingModalOptions = {
@@ -271,12 +271,12 @@ function updateModalSelectionsDOM(pendingModalOptions) {
     } else {
       //time params
       const timeObj = pendingModalOptions[key];
-
       for (tKey in timeObj) {
-        console.log(tKey);
-        console.log(timeObj[tKey]);
+        const timeEl = document.querySelector(
+          `#${camelToKebabCase(tKey)} input`
+        );
+        timeEl.value = `${timeObj[tKey]}`;
       }
-      //need to update the time values
     }
   }
 }
