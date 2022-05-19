@@ -99,6 +99,11 @@ function modalIncreaseOrDecreaseTime(id) {
   upButton.onclick = () => {
     console.log("clicked up");
   };
+
+  const downButton = document.querySelector(`${id} .down`);
+  downButton.onclick = () => {
+    console.log("clicked down ");
+  };
 }
 
 //-------------------------------------------------------------//
