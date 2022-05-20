@@ -96,13 +96,28 @@ document.addEventListener("DOMContentLoaded", () => {
 function modalIncreaseOrDecreaseTime(id) {
   //the id is the parent, either pomodoro-minutes or short-break etc.
   const upButton = document.querySelector(`${id} .up`);
+  const inputField = document.querySelector(`${id} input`);
+
+  inputField.onchange = () => {
+    console.log("changed");
+    //need to check if what they put in is indeed a number
+    //if it isnt reset it to the curernt setting
+    //then we need to update pending settings
+  };
+
   upButton.onclick = () => {
-    console.log("clicked up");
+    //here we need to increment and then update pending
+    inputField.value = String(Number(inputField.value) + 1);
   };
 
   const downButton = document.querySelector(`${id} .down`);
   downButton.onclick = () => {
+    const value = Number(inputField.value) - 1;
     console.log("clicked down ");
+    if (value < 0) {
+      return (inputField.value = String(0));
+    }
+    inputField.value = String(value);
   };
 }
 
