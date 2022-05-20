@@ -15,14 +15,6 @@ const font = {
   monoSpace: "'Space Mono', monospace",
 };
 
-let mode = "pomodoroMinutes"; //initial mode will be pomodoroMinutes, other mode will be short or long break
-let totalTime = 10 * MINUTE; //in seconds
-let timeRemaining = totalTime;
-let percentRemaining = (timeRemaining / totalTime) * 100;
-let interval = null;
-let isModalOpen = false;
-let isPaused = false;
-
 //modal options
 
 let modalOptions = {
@@ -34,6 +26,14 @@ let modalOptions = {
 let pendingModalOptions = {
   ...modalOptions,
 };
+
+let mode = "pomodoroMinutes"; //initial mode will be pomodoroMinutes, other mode will be short or long break
+let totalTime = modalOptions.time[mode] * MINUTE; //in seconds
+let timeRemaining = totalTime;
+let percentRemaining = (timeRemaining / totalTime) * 100;
+let interval = null;
+let isModalOpen = false;
+let isPaused = false;
 
 //-------------------------------------------------------------//
 
@@ -110,6 +110,7 @@ function modalIncreaseOrDecreaseTime(id) {
       //if it is non a number put it back to what it was when it loaded
       //or if its left blank from the proceeding code we set it to 0
     }
+    pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
   };
 
   upButton.onclick = () => {
@@ -193,6 +194,7 @@ function applyPendingModalOptions() {
   modalOptions = { ...pendingModalOptions };
   updateColor(modalOptions.color);
   updateFont(modalOptions.font);
+  updateTime(modalOptions.time[mode]);
   closeModal();
 }
 
@@ -255,6 +257,12 @@ function updateFont(fontType) {
     timeContainer.style.letterSpacing = "-5px";
     timeContainer.style.fontWeight = "700";
   }
+}
+
+function updateTime(time) {
+  totalTime = time * MINUTE;
+  timeRemaining = totalTime;
+  percentRemaining = (timeRemaining / totalTime) * 100;
 }
 
 //close modal
