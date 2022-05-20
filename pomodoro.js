@@ -15,7 +15,7 @@ const font = {
   monoSpace: "'Space Mono', monospace",
 };
 
-let mode = "pomodoro"; //initial mode will be pomodoro, other mode will be short or long break
+let mode = "pomodoroMinutes"; //initial mode will be pomodoroMinutes, other mode will be short or long break
 let totalTime = 10 * MINUTE; //in seconds
 let timeRemaining = totalTime;
 let percentRemaining = (timeRemaining / totalTime) * 100;
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function togglePause() {
     isPaused = !isPaused;
-    //maybe change text to resume
+    //maybe change text to resume when paused
   }
 
   //listeners for time increase or decrease
@@ -108,25 +108,25 @@ function modalIncreaseOrDecreaseTime(id) {
     if (isNaN(inputField.value) || inputField.value === "") {
       inputField.value = pendingModalOptions.time[idInCamelCase];
       //if it is non a number put it back to what it was when it loaded
+      //or if its left blank from the proceeding code we set it to 0
     }
-    //need to check if what they put in is indeed a number
-    //if it isnt reset it to the curernt setting
-    //then we need to update pending settings
   };
 
   upButton.onclick = () => {
     //here we need to increment and then update pending
     inputField.value = String(Number(inputField.value) + 1);
+    pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
   };
 
   const downButton = document.querySelector(`${id} .down`);
   downButton.onclick = () => {
     const value = Number(inputField.value) - 1;
-    console.log("clicked down ");
     if (value < 0) {
+      pendingModalOptions.time[idInCamelCase] = 0;
       return (inputField.value = String(0));
     }
     inputField.value = String(value);
+    pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
   };
 }
 
