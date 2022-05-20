@@ -97,9 +97,18 @@ function modalIncreaseOrDecreaseTime(id) {
   //the id is the parent, either pomodoro-minutes or short-break etc.
   const upButton = document.querySelector(`${id} .up`);
   const inputField = document.querySelector(`${id} input`);
+  const idWithoutHash = id.replace(/^#+/, "");
+  const idInCamelCase = kebabToCamelCase(idWithoutHash);
 
   inputField.onchange = () => {
-    console.log("changed");
+    inputField.value = inputField.value
+      .replace(/^0+/, "")
+      .replace(/[^\d]+/, ""); //trim leading zeroes then trim all white spacce
+
+    if (isNaN(inputField.value) || inputField.value === "") {
+      inputField.value = pendingModalOptions.time[idInCamelCase];
+      //if it is non a number put it back to what it was when it loaded
+    }
     //need to check if what they put in is indeed a number
     //if it isnt reset it to the curernt setting
     //then we need to update pending settings
@@ -309,4 +318,8 @@ function camelToKebabCase(str) {
   return str.replace(/[A-Z]/g, (c) => {
     return "-" + c.toLowerCase();
   });
+}
+
+function kebabToCamelCase(str) {
+  return str.replace(/-./g, (x) => x[1].toUpperCase());
 }
