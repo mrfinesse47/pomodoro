@@ -99,7 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll("#pomodoro-mode-menu li");
   menuItems.forEach((item) => {
     item.onclick = () => {
-      changeMode(determineModeFromID(item.id), item.id);
+      if (!isModalOpen) {
+        changeMode(determineModeFromID(item.id), item.id);
+      }
     };
   });
 });
@@ -177,10 +179,6 @@ function decrementTimeRemaining() {
       percentRemaining = (timeRemaining / totalTime) * 100;
       updatePomodoroDOM();
     } else {
-      //clear interval at time zero
-      //maybe not a good idea
-      //window.clearInterval(interval);
-      //change pomodoro mode to break
       if (mode === "pomodoroMinutes") {
         changeMode("shortBreakTime", "select-short-break");
       }
