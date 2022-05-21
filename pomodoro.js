@@ -99,6 +99,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll("#pomodoro-mode-menu li");
   menuItems.forEach((item) => {
     item.onclick = () => {
+      if (isPaused) {
+        //if changing over in a paused state
+        togglePause();
+      }
       if (!isModalOpen) {
         changeMode(determineModeFromID(item.id), item.id);
       }
