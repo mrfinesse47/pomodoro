@@ -20,7 +20,7 @@ const font = {
 let modalOptions = {
   color: "tomato",
   font: "kumbahSans",
-  time: { shortBreakTime: 10, longBreakTime: 25, pomodoroMinutes: 25 },
+  time: { shortBreakTime: 5, longBreakTime: 15, pomodoroMinutes: 25 },
 };
 
 let pendingModalOptions = {
@@ -63,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //maybe change text to resume when paused
   }
 
+  //listeners for mode chamge needed
+
   //listeners for time increase or decrease
 
   modalIncreaseOrDecreaseTime("#short-break-time");
@@ -87,11 +89,20 @@ document.addEventListener("DOMContentLoaded", () => {
   //modal submit button click listener
   const applyButton = document.getElementById("apply");
   applyButton.onclick = applyPendingModalOptions;
+
+  //mode selection click handlers
+  const menuItems = document.querySelectorAll("#pomodoro-mode-menu li");
+  menuItems.forEach((item) => {
+    item.onclick = () => {
+      changeMode(determineModeFromID(item.id));
+      //console.log(newMode);
+    };
+  });
 });
 
 //helper functions for event subscription  --------------------//
 
-//modal event subscriber helper
+//modal event subscriber helper with function logic------------//
 
 function modalIncreaseOrDecreaseTime(id) {
   //the id is the parent, either pomodoro-minutes or short-break etc.
@@ -135,6 +146,25 @@ function modalIncreaseOrDecreaseTime(id) {
 
 //-functions --------------------------------------------------//
 
+function determineModeFromID(id) {
+  switch (id) {
+    case "select-pomodoro":
+      return "pomodoroMinutes";
+    case "select-short-break":
+      return "shortBreakTime";
+    case "select-long-break":
+      return "longBreakTime";
+    default:
+      console.log("cannot determine mode");
+  }
+}
+
+function changeMode(modeToChangeTo) {
+  mode = modeToChangeTo;
+  updateTime(modalOptions.time[mode]);
+  //need to now update dom to selected
+}
+
 function decrementTimeRemaining() {
   if (!isPaused) {
     if (timeRemaining > 0) {
@@ -144,6 +174,8 @@ function decrementTimeRemaining() {
     } else {
       //clear interval at time zero
       window.clearInterval(interval);
+      //change pomodoro mode to break
+      //setMode()
     }
   }
 }
@@ -182,8 +214,6 @@ function selectPendingOption() {
     default:
       console.log("error: no match");
   }
-
-  //update dom
 }
 
 //modal helper functions
@@ -258,6 +288,8 @@ function updateFont(fontType) {
     timeContainer.style.fontWeight = "700";
   }
 }
+
+//update time in the DOM
 
 function updateTime(time) {
   totalTime = time * MINUTE;
