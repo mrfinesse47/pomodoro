@@ -336,13 +336,15 @@ function closeModal() {
 //open modal
 
 function openModal() {
-  getModalPendingFromActual();
-  updateModalSelectionsDOM(pendingModalOptions);
-  isModalOpen = true;
-  const modal = document.getElementById("modal");
-  const timerView = document.getElementById("timer-view");
-  timerView.style.opacity = "0.5";
-  modal.classList.toggle("hidden");
+  if (!isModalOpen) {
+    getModalPendingFromActual();
+    updateModalSelectionsDOM(pendingModalOptions);
+    isModalOpen = true;
+    const modal = document.getElementById("modal");
+    const timerView = document.getElementById("timer-view");
+    timerView.style.opacity = "0.5";
+    modal.classList.toggle("hidden");
+  }
 }
 
 //modal options
