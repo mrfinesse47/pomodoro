@@ -94,8 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll("#pomodoro-mode-menu li");
   menuItems.forEach((item) => {
     item.onclick = () => {
-      changeMode(determineModeFromID(item.id));
-      //console.log(newMode);
+      changeMode(determineModeFromID(item.id), item.id);
     };
   });
 });
@@ -159,9 +158,10 @@ function determineModeFromID(id) {
   }
 }
 
-function changeMode(modeToChangeTo) {
+function changeMode(modeToChangeTo, id) {
   mode = modeToChangeTo;
   updateTime(modalOptions.time[mode]);
+  changeSelectedModeDOM(modeToChangeTo, id);
   //need to now update dom to selected
 }
 
@@ -221,10 +221,13 @@ function selectPendingOption() {
 //apply modal pending options
 
 function applyPendingModalOptions() {
+  const prevTimeSetting = totalTime / MINUTE;
   modalOptions = { ...pendingModalOptions };
   updateColor(modalOptions.color);
   updateFont(modalOptions.font);
-  updateTime(modalOptions.time[mode]);
+  if (prevTimeSetting !== modalOptions.time[mode]) {
+    updateTime(modalOptions.time[mode]);
+  } //do not change time if user is only wanting to change color or font
   closeModal();
 }
 
@@ -235,6 +238,19 @@ function getModalPendingFromActual() {
 }
 
 //-DOM Manipulation functions ---------------------------------//
+
+function changeSelectedModeDOM(modeToChangeTo, id) {
+  const modeMenu = document.querySelectorAll("#pomodoro-mode-menu li");
+  modeMenu.forEach((mode) => {
+    mode.classList.remove("selected");
+    mode.style.backgroundColor = "transparent";
+  });
+
+  const activeModeEL = document.getElementById(id);
+  activeModeEL.classList.add("selected"); //cant use this way need to apply color??
+  const menuSelected = document.querySelector("nav ul .selected");
+  menuSelected.style.backgroundColor = color[modalOptions.color];
+}
 
 function updatePomodoroDOM() {
   const pomodoroEL = document.getElementById("pomodoro-time");
