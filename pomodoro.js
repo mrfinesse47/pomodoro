@@ -159,6 +159,9 @@ function determineModeFromID(id) {
 }
 
 function changeMode(modeToChangeTo, id) {
+  console.log(id);
+  console.log(modeToChangeTo);
+  console.log(modalOptions.time[mode]);
   mode = modeToChangeTo;
   updateTime(modalOptions.time[mode]);
   changeSelectedModeDOM(modeToChangeTo, id);
@@ -173,9 +176,13 @@ function decrementTimeRemaining() {
       updatePomodoroDOM();
     } else {
       //clear interval at time zero
-      window.clearInterval(interval);
+      //maybe not a good idea
+      //window.clearInterval(interval);
       //change pomodoro mode to break
-      //setMode()
+      if (mode === "pomodoroMinutes") {
+        changeMode("shortBreakTime", "select-short-break");
+        console.log("here");
+      }
     }
   }
 }
@@ -223,7 +230,7 @@ function selectPendingOption() {
 function applyPendingModalOptions() {
   const prevTimeSetting = totalTime / MINUTE;
   modalOptions = { ...pendingModalOptions };
-  updateColor(modalOptions.color);
+  updateColor(color[modalOptions.color]);
   updateFont(modalOptions.font);
   if (prevTimeSetting !== modalOptions.time[mode]) {
     updateTime(modalOptions.time[mode]);
