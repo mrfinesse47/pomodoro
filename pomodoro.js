@@ -159,9 +159,6 @@ function determineModeFromID(id) {
 }
 
 function changeMode(modeToChangeTo, id) {
-  console.log(id);
-  console.log(modeToChangeTo);
-  console.log(modalOptions.time[mode]);
   mode = modeToChangeTo;
   updateTime(modalOptions.time[mode]);
   changeSelectedModeDOM(modeToChangeTo, id);
@@ -181,7 +178,6 @@ function decrementTimeRemaining() {
       //change pomodoro mode to break
       if (mode === "pomodoroMinutes") {
         changeMode("shortBreakTime", "select-short-break");
-        console.log("here");
       }
     }
   }
