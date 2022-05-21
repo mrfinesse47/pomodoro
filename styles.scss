@@ -73,6 +73,9 @@ nav {
     width: 20.4375rem;
     height: 3.9375rem;
     border-radius: 1.9688rem;
+    @include tablet {
+      width: 23.3125rem;
+    }
     background-color: #161932;
     li {
       color: #d7e0ff;
@@ -210,6 +213,9 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 4.9735rem;
+  @include tablet {
+    margin-top: 9rem;
+  }
 }
 
 .settings:hover {

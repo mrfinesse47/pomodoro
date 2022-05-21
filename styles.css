@@ -96,6 +96,12 @@ nav ul {
   background-color: #161932;
 }
 
+@media only screen and (min-width: 767px) {
+  nav ul {
+    width: 23.3125rem;
+  }
+}
+
 nav ul li {
   color: #d7e0ff;
   text-align: center;
@@ -280,6 +286,12 @@ nav ul .selected {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 4.9735rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .settings {
+    margin-top: 9rem;
+  }
 }
 
 .settings:hover {

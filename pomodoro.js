@@ -131,12 +131,20 @@ function modalIncreaseOrDecreaseTime(id) {
       //if it is non a number put it back to what it was when it loaded
       //or if its left blank from the proceeding code we set it to 0
     }
+    if (inputField.value >= 60) {
+      inputField.value = 60;
+    }
     pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
   };
 
   upButton.onclick = () => {
     //here we need to increment and then update pending
-    inputField.value = String(Number(inputField.value) + 1);
+    const value = Number(inputField.value) + 1;
+    if (inputField.value >= 60) {
+      pendingModalOptions.time[idInCamelCase] = 60;
+      return (inputField.value = String(60));
+    }
+    inputField.value = String(value);
     pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
   };
 
