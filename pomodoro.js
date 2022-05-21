@@ -20,7 +20,7 @@ const font = {
 let modalOptions = {
   color: "tomato",
   font: "kumbahSans",
-  time: { shortBreakTime: 5, longBreakTime: 15, pomodoroMinutes: 25 },
+  time: { shortBreakTime: 5, longBreakTime: 9, pomodoroMinutes: 25 },
 };
 
 let pendingModalOptions = {
@@ -60,7 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function togglePause() {
     isPaused = !isPaused;
-    //maybe change text to resume when paused
+    const pause = document.getElementById("pause");
+    if (isPaused) {
+      pause.innerText = "RESUME";
+    } else {
+      pause.innerText = "PAUSE";
+    }
   }
 
   //listeners for mode chamge needed
