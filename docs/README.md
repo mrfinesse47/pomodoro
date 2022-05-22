@@ -12,13 +12,12 @@ This is a solution to the [Pomodoro app challenge on Frontend Mentor](https://ww
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
+
+A simple Pomodoro timer application, that lets you change the font and colors. You can set the timer to pomodoro mode, sort break, and long break. The duration of these intervals is adjustable in the settings menu. You can pause the timer or resume from being paused by clicking on the timer.
 
 ### The challenge
 
@@ -26,14 +25,13 @@ Users should be able to:
 
 - Set a pomodoro timer and short & long break timers
 - Customize how long each timer runs for
-- See a circular progress bar that updates every minute and represents how far through their timer they are
+- Pause and resume the timer
+- See a circular progress bar that updates every minute (I did every second) and represents how far through their timer they are
 - Customize the appearance of the app with the ability to set preferences for colors and fonts
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![The Timer in pomodoro mode](./screenshots//1.png)
 
 ### Links
 
@@ -45,65 +43,26 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
+- SCSS
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Vanilla JS](http://vanilla-js.com/)
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Usually everything in UI is a box, until it isn't. So I had to make use a SVG for the timer itself. Again, I tackled this with a minimalist approach using Vanilla JS only. I think vanilla JS was the right choice for this simple small project.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+If I wanted to continue developing this thing I would add some kind of at minimum browser storage to track your usage of the app. It would be rewarding to earn tomatos for each pomodoro interval you complete.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+## Author -- Kevin Mason
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Linkedin - [@Kevin Mason](https://www.linkedin.com/in/kevin-mason-7b83b3228/)
+- Frontend Mentor - [@mrfinesse47](https://www.frontendmentor.io/profile/mrfinesse47)
+- Github - [@mrfinesse47](https://github.com/mrfinesse47/)
+- Lichess - [@mrfinesse47](https://lichess.org/@/mrfinesse47)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+As Always i'd like to thank the entire community of developers out there sharing their knowledge everywhere across the web.
