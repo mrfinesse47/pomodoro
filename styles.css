@@ -32,13 +32,19 @@ input {
   font-family: "Kumbh Sans", sans-serif;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .title {
     margin-top: 5rem;
   }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 900px) {
+  .title {
+    margin-top: 3rem;
+  }
+}
+
+@media only screen and (min-width: 767px) {
   .title {
     margin-bottom: 3.4375rem;
   }
@@ -48,7 +54,7 @@ input {
   font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .title h1 {
     font-size: 2rem;
     margin: 0;
@@ -66,9 +72,15 @@ nav {
           justify-content: center;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   nav {
     margin-bottom: 6.8125rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  nav {
+    margin-bottom: 2.8125rem;
   }
 }
 
@@ -97,7 +109,7 @@ nav ul {
   background-color: #161932;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   nav ul {
     width: 23.3125rem;
   }
@@ -154,7 +166,7 @@ nav ul .selected {
   position: relative;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .pomodoro-container {
     width: 25.625rem;
     height: 25.625rem;
@@ -203,7 +215,7 @@ nav ul .selected {
   letter-spacing: -4px;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .pomodoro-container .inner-container .time-container {
     font-size: 6.25rem;
   }
@@ -218,7 +230,7 @@ nav ul .selected {
   letter-spacing: 0.8203rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .pomodoro-container .inner-container .pause-button {
     font-size: 1rem;
     line-height: 1.25rem;
@@ -289,9 +301,15 @@ nav ul .selected {
   margin-top: 4.9735rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .settings {
     margin-top: 9rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .settings {
+    margin-top: 3.9375rem;
   }
 }
 
@@ -312,7 +330,7 @@ nav ul .selected {
   border-radius: 15px;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal {
     width: 33.75rem;
   }
@@ -338,7 +356,7 @@ nav ul .selected {
   margin: 1.5rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal header h2 {
     margin: 2.5rem;
     margin-top: 2.125rem;
@@ -354,7 +372,7 @@ nav ul .selected {
   margin: 1.8125rem 1.5rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal header img {
     margin: 2.9775rem 2.415rem 2.04rem;
     height: 0.7956rem;
@@ -375,10 +393,10 @@ nav ul .selected {
   font-weight: 700;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section h3 {
     text-align: left;
-    font-size: 0.8125rem;
+    font-size: 0.8126rem;
     line-height: 1rem;
     letter-spacing: 0.3125rem;
     padding-left: 2.5rem;
@@ -386,7 +404,7 @@ nav ul .selected {
   }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -415,7 +433,7 @@ nav ul .selected {
   margin: 0rem 1.5rem 0.5rem;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .selection {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -435,7 +453,7 @@ nav ul .selected {
   opacity: 0.4;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .selection label {
     font-size: 0.75rem;
     margin-bottom: 0.625rem;
@@ -459,7 +477,7 @@ nav ul .selected {
   color: #1e213f;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .selection .stepper {
     padding: 0.7813rem 1rem;
   }
@@ -475,7 +493,7 @@ nav ul .selected {
   color: #1e213f;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .selection .stepper input {
     padding-bottom: 6px;
   }
@@ -517,7 +535,7 @@ nav ul .selected {
   border-top: #e3e1e1 1px solid;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .circle-selection {
     width: 28.875rem;
     display: -webkit-box;
@@ -548,7 +566,7 @@ nav ul .selected {
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 767px) and (max-width: 899px) {
+@media only screen and (min-width: 767px) {
   .modal section .circle-selection .container {
     margin: 0;
   }

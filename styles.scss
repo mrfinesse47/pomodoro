@@ -29,6 +29,9 @@ input {
   @include tablet {
     margin-top: 5rem;
   }
+  @include desktop {
+    margin-top: 3rem;
+  }
 
   margin: 0 auto;
   color: #d7e0ff;
@@ -38,6 +41,7 @@ input {
   @include tablet {
     margin-bottom: 3.4375rem;
   }
+
   font-family: "Kumbh Sans", sans-serif;
   h1 {
     font-size: 1.5rem;
@@ -54,6 +58,9 @@ nav {
 
   @include tablet {
     margin-bottom: 6.8125rem;
+  }
+  @include desktop {
+    margin-bottom: 2.8125rem;
   }
   display: flex;
   justify-content: center;
@@ -213,6 +220,9 @@ nav {
   @include tablet {
     margin-top: 9rem;
   }
+  @include desktop {
+    margin-top: 3.9375rem;
+  }
 }
 
 .settings:hover {
@@ -266,6 +276,7 @@ nav {
       cursor: pointer;
     }
   }
+
   section {
     h3 {
       margin-top: 1.5rem;
@@ -276,7 +287,7 @@ nav {
       font-weight: 700;
       @include tablet {
         text-align: left;
-        font-size: 0.8125rem;
+        font-size: 0.8126rem;
         line-height: 1rem;
         letter-spacing: 0.3125rem;
         padding-left: 2.5rem;

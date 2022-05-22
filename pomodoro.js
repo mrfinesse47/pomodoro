@@ -47,7 +47,6 @@ interval = window.setInterval(decrementTimeRemaining, 1000);
 //-DOM initilization onReady-----------------------------------//
 
 document.addEventListener("DOMContentLoaded", () => {
-  openModal();
   //adding click listeners
   const modalCloseButton = document.getElementById("modal-close");
   modalCloseButton.onclick = () => closeModal();
