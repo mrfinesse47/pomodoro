@@ -139,7 +139,7 @@ function modalIncreaseOrDecreaseTime(id) {
 
   upButton.onclick = () => {
     //here we need to increment and then update pending
-    const value = Number(inputField.value) + 1;
+    const value = Number(inputField.value);
     if (inputField.value >= 60) {
       pendingModalOptions.time[idInCamelCase] = 60;
       return (inputField.value = String(60));
@@ -326,7 +326,7 @@ function updateFont(fontType) {
 //update time in the DOM
 
 function updateTime(time) {
-  totalTime = time * MINUTE + 1;
+  totalTime = time * MINUTE;
   timeRemaining = totalTime;
   percentRemaining = (timeRemaining / totalTime) * 100;
 }
