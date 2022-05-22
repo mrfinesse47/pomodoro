@@ -54,7 +54,7 @@ Usually everything in UI is a box, until it isn't. So I had to make use a SVG fo
 
 ### Continued development
 
-If I wanted to continue developing this thing I would add some kind of at minimum browser storage to track your usage of the app. It would be rewarding to earn tomatos for each pomodoro interval you complete.
+If I wanted to continue developing this thing I would add some kind of at minimum browser storage to track your usage of the app. It would be rewarding to earn tomatos for each pomodoro interval you complete. A start button would be my first addition though/.
 
 ## Author -- Kevin Mason
 
