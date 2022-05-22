@@ -311,6 +311,12 @@ nav ul .selected {
   border-radius: 15px;
 }
 
+@media only screen and (min-width: 767px) {
+  .modal {
+    width: 33.75rem;
+  }
+}
+
 .modal header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -331,10 +337,28 @@ nav ul .selected {
   margin: 1.5rem;
 }
 
+@media only screen and (min-width: 767px) {
+  .modal header h2 {
+    margin: 2.5rem;
+    margin-top: 2.125rem;
+    margin-bottom: 1.9375rem;
+    font-size: 1.75rem;
+    line-height: 2.1875rem;
+  }
+}
+
 .modal header img {
   height: 0.875rem;
   width: 0.875rem;
-  margin: 29px 24px;
+  margin: 1.8125rem 1.5rem;
+}
+
+@media only screen and (min-width: 767px) {
+  .modal header img {
+    margin: 2.9775rem 2.415rem 2.04rem;
+    height: 0.7956rem;
+    width: 0.7956rem;
+  }
 }
 
 .modal header img:hover {
@@ -348,6 +372,16 @@ nav ul .selected {
   font-size: 0.6875rem;
   letter-spacing: 0.2644rem;
   font-weight: 700;
+}
+
+@media only screen and (min-width: 767px) {
+  .modal section h3 {
+    text-align: left;
+    font-size: 0.8125rem;
+    line-height: 1rem;
+    letter-spacing: 0.3125rem;
+    padding-left: 2.5rem;
+  }
 }
 
 .modal section .selection {

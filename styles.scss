@@ -232,6 +232,9 @@ nav {
   transform: translate(-50%, -50%);
   width: 20.4375rem;
   border-radius: 15px;
+  @include tablet {
+    width: 33.75rem;
+  }
   header {
     display: flex;
     justify-content: space-between;
@@ -243,11 +246,24 @@ nav {
       font-weight: 700;
       color: #161932;
       margin: 1.5rem;
+      @include tablet {
+        margin: 2.5rem;
+        margin-top: 2.125rem;
+        margin-bottom: 1.9375rem;
+
+        font-size: 1.75rem;
+        line-height: 2.1875rem;
+      }
     }
     img {
       height: 0.875rem;
       width: 0.875rem;
-      margin: 29px 24px;
+      margin: 1.8125rem 1.5rem;
+      @include tablet {
+        margin: 2.9775rem 2.415rem 2.04rem;
+        height: 0.7956rem;
+        width: 0.7956rem;
+      }
     }
     img:hover {
       cursor: pointer;
@@ -261,6 +277,13 @@ nav {
       font-size: 0.6875rem;
       letter-spacing: 0.2644rem;
       font-weight: 700;
+      @include tablet {
+        text-align: left;
+        font-size: 0.8125rem;
+        line-height: 1rem;
+        letter-spacing: 0.3125rem;
+        padding-left: 2.5rem;
+      }
     }
     .selection {
       display: flex;
