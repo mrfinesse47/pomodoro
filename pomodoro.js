@@ -252,7 +252,9 @@ function applyPendingModalOptions() {
 //get modal pending from actual settings
 
 function getModalPendingFromActual() {
+  const time = { ...modalOptions.time };
   pendingModalOptions = { ...modalOptions };
+  pendingModalOptions.time = time; //a cheap deep copy
 }
 
 //-DOM Manipulation functions ---------------------------------//
