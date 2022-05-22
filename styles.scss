@@ -1,9 +1,5 @@
 @import "./media-queries.scss";
 
-// @include tablet {
-
-// }
-
 body {
   font-family: "Kumbh Sans", sans-serif;
   box-sizing: border-box;
@@ -47,6 +43,7 @@ input {
     font-size: 1.5rem;
     @include tablet {
       font-size: 2rem;
+      margin: 0;
     }
   }
 }
