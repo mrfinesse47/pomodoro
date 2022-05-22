@@ -326,7 +326,7 @@ function updateFont(fontType) {
 //update time in the DOM
 
 function updateTime(time) {
-  totalTime = time * MINUTE;
+  totalTime = time * MINUTE + 1;
   timeRemaining = totalTime;
   percentRemaining = (timeRemaining / totalTime) * 100;
 }
