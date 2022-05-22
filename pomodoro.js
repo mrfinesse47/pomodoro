@@ -40,7 +40,7 @@ let isPaused = false;
 //-initilization ----------------------------------------------//
 
 updatePomodoroDOM();
-interval = window.setInterval(decrementTimeRemaining, 1000);
+interval = window.setInterval(decrementTimeRemaining, 100);
 
 //-------------------------------------------------------------//
 
@@ -187,7 +187,8 @@ function changeMode(modeToChangeTo, id) {
 function decrementTimeRemaining() {
   if (!isPaused) {
     if (timeRemaining > 0) {
-      timeRemaining -= 1;
+      timeRemaining -= 0.1;
+      timeRemaining = timeRemaining.toFixed(3);
       percentRemaining = (timeRemaining / totalTime) * 100;
       updatePomodoroDOM();
     } else {
