@@ -280,7 +280,7 @@ nav {
         line-height: 1rem;
         letter-spacing: 0.3125rem;
         padding-left: 2.5rem;
-        margin-bottom: 1.375rem;
+        margin-bottom: 1.625rem;
       }
     }
     @include tablet {
@@ -308,6 +308,10 @@ nav {
         font-weight: 700;
         color: #1e213f;
         opacity: 0.4;
+        @include tablet {
+          font-size: 0.75rem;
+          margin-bottom: 0.625rem;
+        }
       }
       .stepper {
         display: flex;
@@ -328,6 +332,9 @@ nav {
           background-color: #eff1fa;
           width: 5.5rem;
           padding-top: 6px;
+          @include tablet {
+            padding-bottom: 6px;
+          }
           font-size: 0.875rem;
           font-weight: 700;
           color: #1e213f;
@@ -356,10 +363,18 @@ nav {
       }
     }
     .circle-selection {
-      width: 280px;
+      width: 17.5rem;
       margin: auto;
       margin-top: 1.5rem;
       border-top: #e3e1e1 1px solid;
+
+      @include tablet {
+        width: 28.875rem;
+        display: flex;
+        align-items: center;
+        padding-top: 1.5rem;
+        justify-content: space-between;
+      }
 
       .container {
         display: flex;
@@ -367,6 +382,9 @@ nav {
         justify-content: space-between;
         width: 152px;
         margin: 0 auto;
+        @include tablet {
+          margin: 0;
+        }
       }
       h4 {
         font-size: 0.6875rem;

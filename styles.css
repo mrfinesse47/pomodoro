@@ -382,7 +382,7 @@ nav ul .selected {
     line-height: 1rem;
     letter-spacing: 0.3125rem;
     padding-left: 2.5rem;
-    margin-bottom: 1.375rem;
+    margin-bottom: 1.625rem;
   }
 }
 
@@ -435,6 +435,13 @@ nav ul .selected {
   opacity: 0.4;
 }
 
+@media only screen and (min-width: 767px) and (max-width: 899px) {
+  .modal section .selection label {
+    font-size: 0.75rem;
+    margin-bottom: 0.625rem;
+  }
+}
+
 .modal section .selection .stepper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -468,6 +475,12 @@ nav ul .selected {
   color: #1e213f;
 }
 
+@media only screen and (min-width: 767px) and (max-width: 899px) {
+  .modal section .selection .stepper input {
+    padding-bottom: 6px;
+  }
+}
+
 .modal section .selection .stepper input:focus {
   outline: none;
 }
@@ -498,10 +511,26 @@ nav ul .selected {
 }
 
 .modal section .circle-selection {
-  width: 280px;
+  width: 17.5rem;
   margin: auto;
   margin-top: 1.5rem;
   border-top: #e3e1e1 1px solid;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 899px) {
+  .modal section .circle-selection {
+    width: 28.875rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 1.5rem;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .modal section .circle-selection .container {
@@ -517,6 +546,12 @@ nav ul .selected {
           justify-content: space-between;
   width: 152px;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 899px) {
+  .modal section .circle-selection .container {
+    margin: 0;
+  }
 }
 
 .modal section .circle-selection h4 {
