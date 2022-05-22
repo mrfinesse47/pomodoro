@@ -35,7 +35,7 @@ input {
 
   margin: 0 auto;
   color: #d7e0ff;
-  z-index: 10;
+  z-index: 5;
   text-align: center;
   margin-bottom: 2.4375rem;
   @include tablet {
@@ -55,6 +55,7 @@ input {
 nav {
   font-weight: 700;
   margin-bottom: 3rem;
+  z-index: 5;
 
   @include tablet {
     margin-bottom: 6.8125rem;
@@ -110,8 +111,8 @@ nav {
 }
 
 .pomodoro-container {
-  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
-  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
+  //background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+
   border-radius: 50%;
   width: 18.75rem; //the image and scales nicely here due to viewbox
   height: 18.75rem;
@@ -211,6 +212,20 @@ nav {
     stroke-width: 0.625rem;
     stroke: #161932;
   }
+}
+
+.pomodoro-container :after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  background: linear-gradient(315deg, #2e325a 0%, #0e112a 100%);
+  box-shadow: -50px -50px 100px #272c5a, 50px 50px 100px #121530;
 }
 
 .settings {
