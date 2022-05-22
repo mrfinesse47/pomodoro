@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Front End Mentor](https://www.frontendmentor.io/solutions/pomodoro-timer-created-with-the-vanilla-js-framework-ajq63lcSed)
+- Live Site URL: [at Github Pages](https://mrfinesse47.github.io/pomodoro/)
 
 ## My process
 
