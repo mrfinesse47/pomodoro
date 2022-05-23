@@ -41,7 +41,7 @@ let isPaused = false;
 
 updatePomodoroDOM();
 
-interval = window.setInterval(decrementTimeRemaining, 10);
+interval = window.setInterval(decrementTimeRemaining, 100);
 
 //-------------------------------------------------------------//
 
