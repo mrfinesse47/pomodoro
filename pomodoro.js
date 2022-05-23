@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   pomodoroContainer.onclick = () => {
     if (timeRemaining == 0) {
-      //reset on click kmzz
+      //reset on click
       updateTime(modalOptions.time[mode]);
     } else {
       togglePause();
@@ -196,7 +196,6 @@ function changeMode(modeToChangeTo, id) {
   updateTime(modalOptions.time[mode]);
   setToIsPaused();
   changeSelectedModeDOM(id);
-  //need to now update dom to selected
 }
 
 function decrementTimeRemaining() {
@@ -283,7 +282,7 @@ function changeSelectedModeDOM(id) {
   });
 
   const activeModeEL = document.getElementById(id);
-  activeModeEL.classList.add("selected"); //cant use this way need to apply color??
+  activeModeEL.classList.add("selected");
   const menuSelected = document.querySelector("nav ul .selected");
   menuSelected.style.backgroundColor = color[modalOptions.color];
 }
