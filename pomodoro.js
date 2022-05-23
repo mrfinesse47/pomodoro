@@ -40,13 +40,15 @@ let isPaused = false;
 //-initilization ----------------------------------------------//
 
 updatePomodoroDOM();
-interval = window.setInterval(decrementTimeRemaining, 100);
+
+interval = window.setInterval(decrementTimeRemaining, 10);
 
 //-------------------------------------------------------------//
 
 //-DOM initilization onReady-----------------------------------//
 
 document.addEventListener("DOMContentLoaded", () => {
+  setToIsPaused();
   //adding click listeners
   const modalCloseButton = document.getElementById("modal-close");
   modalCloseButton.onclick = () => closeModal();
@@ -55,7 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const pomodoroContainer = document.querySelector(".pomodoro-container");
 
   pomodoroContainer.onclick = () => {
-    togglePause();
+    if (timeRemaining == 0) {
+      //reset on click kmzz
+      updateTime(modalOptions.time[mode]);
+    } else {
+      togglePause();
+    }
   };
 
   function togglePause() {
@@ -99,10 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll("#pomodoro-mode-menu li");
   menuItems.forEach((item) => {
     item.onclick = () => {
-      if (isPaused) {
-        //if changing over in a paused state
-        togglePause();
-      }
       if (!isModalOpen) {
         changeMode(determineModeFromID(item.id), item.id);
       }
@@ -164,6 +167,17 @@ function modalIncreaseOrDecreaseTime(id) {
 
 //-functions --------------------------------------------------//
 
+function setToIsPaused() {
+  isPaused = true;
+  const pause = document.getElementById("pause");
+
+  if (timeRemaining === totalTime) {
+    pause.innerText = "START";
+  } else {
+    pause.innerText = "RESUME";
+  }
+}
+
 function determineModeFromID(id) {
   switch (id) {
     case "select-pomodoro":
@@ -180,7 +194,8 @@ function determineModeFromID(id) {
 function changeMode(modeToChangeTo, id) {
   mode = modeToChangeTo;
   updateTime(modalOptions.time[mode]);
-  changeSelectedModeDOM(modeToChangeTo, id);
+  setToIsPaused();
+  changeSelectedModeDOM(id);
   //need to now update dom to selected
 }
 
@@ -190,13 +205,13 @@ function decrementTimeRemaining() {
       timeRemaining -= 0.1;
       timeRemaining = timeRemaining.toFixed(3);
       percentRemaining = (timeRemaining / totalTime) * 100;
-      updatePomodoroDOM();
     } else {
       if (mode === "pomodoroMinutes") {
         changeMode("shortBreakTime", "select-short-break");
       }
     }
   }
+  updatePomodoroDOM();
 }
 
 //-------------------------------------------------------------//
@@ -260,7 +275,7 @@ function getModalPendingFromActual() {
 
 //-DOM Manipulation functions ---------------------------------//
 
-function changeSelectedModeDOM(modeToChangeTo, id) {
+function changeSelectedModeDOM(id) {
   const modeMenu = document.querySelectorAll("#pomodoro-mode-menu li");
   modeMenu.forEach((mode) => {
     mode.classList.remove("selected");
@@ -277,6 +292,7 @@ function updatePomodoroDOM() {
   const pomodoroEL = document.getElementById("pomodoro-time");
   const timeRemainingLeft = document.getElementById("time-remaining-left");
   const timeRemainingRight = document.getElementById("time-remaining-right");
+  const pause = document.getElementById("pause");
   pomodoroEL.style.strokeDasharray = `${
     percentRemaining * 0.01 * 2 * PI * RADIUS //(100-percentage) to count up
   }, 36000`;
@@ -285,9 +301,9 @@ function updatePomodoroDOM() {
     .slice(14, 19); //no need for moment.js
   timeRemainingLeft.innerHTML = timeRemainingStr.slice(0, 2);
   timeRemainingRight.innerHTML = timeRemainingStr.slice(3, 5);
-  if (timeRemaining === 0) {
-    //remove on time 0
+  if (timeRemaining == 0) {
     pomodoroEL.style.stroke = "none";
+    pause.innerText = "RESTART";
   } else {
     if (pomodoroEL.style.stroke === "none") {
       //only add to DOM if it is set to none
