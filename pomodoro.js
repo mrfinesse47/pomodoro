@@ -154,9 +154,9 @@ function modalIncreaseOrDecreaseTime(id) {
   const downButton = document.querySelector(`${id} .down`);
   downButton.onclick = () => {
     const value = Number(inputField.value) - 1;
-    if (value < 0) {
-      pendingModalOptions.time[idInCamelCase] = 0;
-      return (inputField.value = String(0));
+    if (value <= 0) {
+      pendingModalOptions.time[idInCamelCase] = 1;
+      return (inputField.value = String(1));
     }
     inputField.value = String(value);
     pendingModalOptions.time[idInCamelCase] = Number(inputField.value);
