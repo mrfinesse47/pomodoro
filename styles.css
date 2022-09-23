@@ -65,6 +65,7 @@ nav {
   font-weight: 700;
   margin-bottom: 3rem;
   z-index: 5;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
